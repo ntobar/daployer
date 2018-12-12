@@ -10,6 +10,7 @@ import java.awt.event.FocusListener;
 import javax.swing.*;
 
 import Cards.ICard;
+import Cards.dAppCard;
 import Visual.MainPanels.CreatePanel;
 import Visual.MainPanels.ExplorePanel;
 import Visual.MainPanels.MyCardsPanel;
@@ -47,7 +48,7 @@ public class HomeView extends JFrame {
     //this.setBackground(MAIA_BG_COLOR);
 
 
-    this.card = card;
+    this.card = new dAppCard();
 
     menuPanel = new MenuPanel();
     this.add(menuPanel, BorderLayout.WEST);

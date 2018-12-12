@@ -64,6 +64,11 @@ public class Controller implements IController {
 
     } else if (e.getActionCommand().equals("createCardButton")) {
 
+      JPanel newCard = homeView.getCreatePanel().getCard().createCard(
+              homeView.getCreatePanel().getCard().getName(), homeView.getCreatePanel().getCard().getTitle());
+      //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
+      homeView.getMyCardsPanel().add(newCard);
+
 
       //TODO: Call card.createCard()
 

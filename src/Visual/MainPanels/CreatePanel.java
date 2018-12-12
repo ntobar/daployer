@@ -12,6 +12,7 @@ import javax.swing.border.Border;
 
 import Cards.Card;
 import Cards.ICard;
+import Cards.dAppCard;
 
 public class CreatePanel extends JPanel {
   private Color MAIA_BG_COLOR;
@@ -35,6 +36,7 @@ public class CreatePanel extends JPanel {
   public CreatePanel() {
     super();
 
+    this.card = new dAppCard();
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
@@ -81,16 +83,34 @@ public class CreatePanel extends JPanel {
 
       @Override
       public void focusLost(FocusEvent e) {
+
         String nameText = ((JTextField) e.getSource()).getText();
 
+        setName(nameText);
       }
     });
+
 
 
     //this.card = new Card(name);
 
     titleField = new JTextField();
     titleField.setColumns(10);
+    titleField.addFocusListener(new FocusListener() {
+      @Override
+      public void focusGained(FocusEvent e) {
+
+      }
+
+      @Override
+      public void focusLost(FocusEvent e) {
+
+        String nameText = ((JTextField) e.getSource()).getText();
+
+        setTitle(nameText);
+
+      }
+    });
 
 
     //---------------------------------------------------------------------------------------------
@@ -121,7 +141,13 @@ public class CreatePanel extends JPanel {
 
   public void setName(String text) {
 
-    this.card.
+    this.card.setName(text);
+
+  }
+
+  public void setTitle(String text) {
+
+    this.card.setTitle(text);
 
   }
 

@@ -21,14 +21,14 @@ public abstract class Card implements ICard {
 
 
   //TODO: Implement this later , HTML description, Image backgroundImage, Image logoImage
-  public Card(String name, String title) {
+  public Card() {
     super();
 
     this.MAIA_BG_COLOR = new Color(40, 45, 51);
     this.MAIA_LOGO_COLOR = new Color(144, 195, 240);
 
-    this.name = name;
-    this.title = title;
+    this.name = "";
+    this.title = "";
     this.description = description;
     this.backgroundImage = backgroundImage;
     this.logoImage = logoImage;
@@ -41,10 +41,12 @@ public abstract class Card implements ICard {
 
     card.setLayout(new GridBagLayout());
 
-    JLabel nameLabel = new JLabel(name);
+    JLabel nameLabel = new JLabel(name + " ");
     JLabel titleLabel = new JLabel(title);
 
-    card.setSize(300, 500);
+    card.setPreferredSize(new Dimension(300,500));
+
+
 
     card.add(nameLabel);
     card.add(titleLabel);
