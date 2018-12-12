@@ -2,6 +2,8 @@ package Controller;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.io.File;
 
 import javax.swing.*;
@@ -30,7 +32,7 @@ public class Controller implements IController {
 
 
       CardLayout cl = (CardLayout)(homeView.getBasePanel().getLayout());
-      cl.show(homeView.getBasePanel(), e.getActionCommand());
+      cl.show(homeView.getBasePanel(), "createPanel");
 
 //      if(!(homeView.getCreatePanel().isVisible())) {
 //        homeView.makeInvisible(homeView.getMenuPanel(), homeView.getExplorePanel());
@@ -39,15 +41,49 @@ public class Controller implements IController {
 //      }
 
 
-      homeView.getMyCardsPanel().setVisible(true);
-      homeView.makeInvisible(homeView.getCreatePanel(),homeView.getExplorePanel());
+//      homeView.getMyCardsPanel().setVisible(true);
+//      homeView.makeInvisible(homeView.getCreatePanel(),homeView.getExplorePanel());
 
 
 
       //homeView.add(homeView.getMyCardsPanel(), BorderLayout.EAST);
 
 
+    } else if (e.getActionCommand().equals("myCardsButton")) {
+
+
+
+
+      CardLayout cl = (CardLayout) (homeView.getBasePanel().getLayout());
+
+      cl.show(homeView.getBasePanel(), "myCardsPanel");
+
+
+
+    } else if (e.getActionCommand().equals("exploreButton")) {
+
+
+
+
+      CardLayout cl = (CardLayout) (homeView.getBasePanel().getLayout());
+      cl.show(homeView.getBasePanel(), "explorePanel");
+
+
+
+    } else if (e.getActionCommand().equals("createCardButton")) {
+
+
+
+
+      //TODO: Call card.createCard()
+
+
+
     } else if (e.getActionCommand().equals("chooseBGIMG")) {
+
+
+
+
       int returnVal = homeView.getCreatePanel().getBackgroundImgChooser().showOpenDialog(homeView);
 
       if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -63,4 +99,6 @@ public class Controller implements IController {
 
 
   }
+
+
 }

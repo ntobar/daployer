@@ -3,6 +3,8 @@ package Visual;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 
 
 import javax.swing.*;
@@ -63,15 +65,16 @@ public class HomeView extends JFrame {
     //--------
     createPanel = new CreatePanel();
     //this.add(createPanel, BorderLayout.EAST);
-    basePanel.add(createPanel);
+    basePanel.add(createPanel, "createPanel");
+    //basePanel.add(createPanel);
 
     myCardsPanel = new MyCardsPanel();
-    myCardsPanel.add(createPanel);
+    basePanel.add(myCardsPanel, "myCardsPanel");
     //this.add(myCardsPanel, BorderLayout.EAST);
     //myCardsPanel.setVisible(false);
 
     explorePanel = new ExplorePanel();
-    explorePanel.add(createPanel);
+    basePanel.add(explorePanel, "explorePanel");
     //this.add(explorePanel, BorderLayout.EAST);
     //explorePanel.setVisible(false);
 
@@ -115,6 +118,25 @@ public class HomeView extends JFrame {
     return card;
   }
 
+  public void setFocusListener(FocusListener fListen) {
+    this.getCreatePanel().getNameField().addFocusListener(fListen);
+
+    //this.getCreatePanel().getNameLabel().addFocusListener(fListen);
+
+  }
+
+//  @Override
+//  public void focusGained(FocusEvent e) {
+//
+//  }
+//
+//  @Override
+//  public void focusLost(FocusEvent e) {
+//
+//  }
+
+
+
 
 
   public void setActionListener(ActionListener listen) {
@@ -124,6 +146,10 @@ public class HomeView extends JFrame {
     this.getMenuPanel().getExploreButton().addActionListener(listen);
 
     this.getCreatePanel().getChooseBackGroundImg().addActionListener(listen);
+
+    this.getCreatePanel().getCreateCard().addActionListener(listen);
+
+
 
 
 

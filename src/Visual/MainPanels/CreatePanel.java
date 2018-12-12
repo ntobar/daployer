@@ -1,6 +1,8 @@
 package Visual.MainPanels;
 
 import java.awt.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 
@@ -8,6 +10,7 @@ import java.io.BufferedReader;
 import javax.swing.*;
 import javax.swing.border.Border;
 
+import Cards.Card;
 import Cards.ICard;
 
 public class CreatePanel extends JPanel {
@@ -18,10 +21,16 @@ public class CreatePanel extends JPanel {
   private JLabel nameLabel;
   private JLabel titleLabel;
   private JLabel descriptionLabel;
+  private JTextField nameField;
+  private JTextField titleField;
   private JButton chooseBackGroundImg;
   private JButton chooseLogoImg;
+  private JButton chooseHTML;
   private JFileChooser backgroundImgChooser;
   private JFileChooser logoImgChooser;
+  private JFileChooser htmlChooser;
+
+
 
 
   public CreatePanel() {
@@ -45,8 +54,8 @@ public class CreatePanel extends JPanel {
             "Card Factory", 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
 
-    this.createCard = new JButton("Create Card");
-    this.add(createCard);
+    //this.setLayout(new BorderLayout());
+
 
     //---------------------------------------------------------------------------------------------
     //------------------------------------JLabels Setup -------------------------------------------
@@ -55,6 +64,48 @@ public class CreatePanel extends JPanel {
     nameLabel = new JLabel("Card Name: ");
     titleLabel = new JLabel("Card Title: ");
     descriptionLabel = new JLabel("Card Description");
+
+
+
+    //---------------------------------------------------------------------------------------------
+    //------------------------------------JTextFields Setup ---------------------------------------
+    //---------------------------------------------------------------------------------------------
+
+    nameField = new JTextField();
+    nameField.setColumns(10);
+    nameField.setActionCommand("nameField");
+    //String nameText = "";
+    nameField.addFocusListener(new FocusListener() {
+      @Override
+      public void focusGained(FocusEvent e) {
+
+      }
+
+      @Override
+      public void focusLost(FocusEvent e) {
+        //nameText = ((JTextField)e.getSource()).getText();
+
+      }
+    });
+
+
+
+    //this.card = new Card(name);
+
+    titleField = new JTextField();
+    titleField.setColumns(10);
+
+
+
+    //---------------------------------------------------------------------------------------------
+    //------------------------------------Order Setup -------------------------------------------
+    //---------------------------------------------------------------------------------------------
+
+    this.add(nameLabel);
+    this.add(nameField);
+
+    this.add(titleLabel);
+    this.add(titleField);
 
     backgroundImgChooser = new JFileChooser();
     //int returnVal = fc.showOpenDialog(aComponent);
@@ -65,6 +116,12 @@ public class CreatePanel extends JPanel {
     this.add(chooseBackGroundImg);
 
 
+
+
+
+    this.createCard = new JButton("Create Card");
+    createCard.setActionCommand("createCardButton");
+    this.add(createCard);
 
 
 
@@ -105,5 +162,13 @@ public class CreatePanel extends JPanel {
 
   public JFileChooser getLogoImgChooser() {
     return logoImgChooser;
+  }
+
+  public JTextField getNameField() {
+    return nameField;
+  }
+
+  public JTextField getTitleField() {
+    return titleField;
   }
 }
