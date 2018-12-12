@@ -5,9 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 
-import javax.swing.JFrame;
+import javax.swing.*;
+
 import Cards.ICard;
 import Visual.MainPanels.CreatePanel;
+import Visual.MainPanels.ExplorePanel;
 import Visual.MainPanels.MyCardsPanel;
 
 
@@ -17,6 +19,8 @@ import Visual.MainPanels.MyCardsPanel;
 public class HomeView extends JFrame {
   private MenuPanel menuPanel;
   private CreatePanel createPanel;
+  private ExplorePanel explorePanel;
+  private JPanel basePanel;
 
 
   private MyCardsPanel myCardsPanel;
@@ -47,10 +51,29 @@ public class HomeView extends JFrame {
     menuPanel = new MenuPanel();
     this.add(menuPanel, BorderLayout.WEST);
 
+    //this.setLayout(new CardLayout());
+
+    basePanel = new JPanel(new CardLayout());
+    this.add(basePanel, BorderLayout.EAST);
+
+
+
+
+
+    //--------
     createPanel = new CreatePanel();
-    this.add(createPanel, BorderLayout.EAST);
+    //this.add(createPanel, BorderLayout.EAST);
+    basePanel.add(createPanel);
 
     myCardsPanel = new MyCardsPanel();
+    myCardsPanel.add(createPanel);
+    //this.add(myCardsPanel, BorderLayout.EAST);
+    //myCardsPanel.setVisible(false);
+
+    explorePanel = new ExplorePanel();
+    explorePanel.add(createPanel);
+    //this.add(explorePanel, BorderLayout.EAST);
+    //explorePanel.setVisible(false);
 
 
 
@@ -60,6 +83,11 @@ public class HomeView extends JFrame {
     this.pack();
     this.setVisible(true);
 
+  }
+
+  public void makeInvisible(JPanel panel1, JPanel panel2) {
+    panel1.setVisible(false);
+    panel2.setVisible(false);
   }
 
 
@@ -75,9 +103,19 @@ public class HomeView extends JFrame {
     return myCardsPanel;
   }
 
+  public ExplorePanel getExplorePanel() {
+    return explorePanel;
+  }
+
+  public JPanel getBasePanel() {
+    return basePanel;
+  }
+
   public ICard getCard() {
     return card;
   }
+
+
 
   public void setActionListener(ActionListener listen) {
 

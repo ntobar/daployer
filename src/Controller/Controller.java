@@ -28,9 +28,23 @@ public class Controller implements IController {
     if (e.getActionCommand().equals("createButton")) {
 
 
-      homeView.getCreatePanel().setVisible(false);
 
-      homeView.add(homeView.getMyCardsPanel(), BorderLayout.EAST);
+      CardLayout cl = (CardLayout)(homeView.getBasePanel().getLayout());
+      cl.show(homeView.getBasePanel(), e.getActionCommand());
+
+//      if(!(homeView.getCreatePanel().isVisible())) {
+//        homeView.makeInvisible(homeView.getMenuPanel(), homeView.getExplorePanel());
+//        homeView.getCreatePanel().setVisible(true);
+//
+//      }
+
+
+      homeView.getMyCardsPanel().setVisible(true);
+      homeView.makeInvisible(homeView.getCreatePanel(),homeView.getExplorePanel());
+
+
+
+      //homeView.add(homeView.getMyCardsPanel(), BorderLayout.EAST);
 
 
     } else if (e.getActionCommand().equals("chooseBGIMG")) {
