@@ -3,6 +3,7 @@ package Visual.MainPanels;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -31,15 +32,6 @@ public class MyCardsPanel extends JPanel {
     this.setBorder(BorderFactory.createTitledBorder(border,
             "My Cards", 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
-
-
-
-
-
-
-
-
-
 
 
   }

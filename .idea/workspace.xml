@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="719c4350-bc3d-4e1e-9b61-d6cd92636895" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Cards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/ICard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/ICard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Visual/HomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visual/HomeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Visual/MainPanels/ExplorePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visual/MainPanels/ExplorePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Visual/MainPanels/MyCardsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visual/MainPanels/MyCardsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Visual/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visual/MenuPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +31,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="form" value="1" />
-          <entry key="java" value="14" />
+          <entry key="java" value="15" />
           <entry key="md" value="1" />
           <entry key="png" value="1" />
         </counts>
@@ -35,19 +40,19 @@
         <counts>
           <entry key="GUI_DESIGNER_FORM" value="1" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="14" />
+          <entry key="JAVA" value="15" />
           <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5706" />
+          <entry key="java" value="5831" />
           <entry key="md" value="134" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5706" />
+          <entry key="JAVA" value="5831" />
           <entry key="Markdown" value="134" />
         </counts>
       </usages-collector>
@@ -59,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/src/Visual/HomeView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
-              <caret line="134" column="2" lean-forward="true" selection-start-line="134" selection-start-column="2" selection-end-line="134" selection-end-column="2" />
+              <caret line="127" column="2" selection-start-line="127" selection-start-column="2" selection-end-line="127" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1081#1082#0" expanded="true" />
@@ -83,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/Visual/MenuPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1075">
-              <caret line="167" selection-start-line="167" selection-end-line="167" />
+              <caret line="157" selection-start-line="157" selection-end-line="157" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4013#4014#0" expanded="true" />
@@ -103,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/src/Controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="618">
-              <caret line="102" selection-start-line="102" selection-end-line="102" />
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="92" column="6" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
+            <state relative-caret-position="214">
+              <caret line="120" selection-start-line="120" selection-end-line="120" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2061#2062#0" expanded="true" />
@@ -157,11 +162,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Cards/ICard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Visual/MainPanels/MyCardsPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,10 +186,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cards/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="21" column="89" selection-start-line="21" selection-start-column="89" selection-end-line="21" selection-end-column="89" />
+            <state relative-caret-position="180">
+              <caret line="63" selection-start-line="63" selection-end-line="77" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1419#1420#0" expanded="true" />
+                <element signature="e#1440#1441#0" expanded="true" />
+                <element signature="e#1470#1471#0" expanded="true" />
+                <element signature="e#1492#1493#0" expanded="true" />
+                <element signature="e#1526#1527#0" expanded="true" />
+                <element signature="e#1552#1553#0" expanded="true" />
+                <element signature="e#1592#1593#0" expanded="true" />
+                <element signature="e#1620#1621#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -201,7 +223,6 @@
         <option value="$PROJECT_DIR$/src/README.md" />
         <option value="$PROJECT_DIR$/src/Card.java" />
         <option value="$PROJECT_DIR$/src/HomeView.java" />
-        <option value="$PROJECT_DIR$/src/Cards/ICard.java" />
         <option value="$PROJECT_DIR$/src/Visual/MainPanel.form" />
         <option value="$PROJECT_DIR$/src/Visual/MainScreen.java" />
         <option value="$PROJECT_DIR$/src/Visual/IController.java" />
@@ -211,11 +232,12 @@
         <option value="$PROJECT_DIR$/src/Visual/MainPanels/MyCardsPanel.java" />
         <option value="$PROJECT_DIR$/src/Visual/MainPanels/ExplorePanel.java" />
         <option value="$PROJECT_DIR$/src/Visual/MenuPanel.java" />
-        <option value="$PROJECT_DIR$/src/Cards/Card.java" />
         <option value="$PROJECT_DIR$/src/Controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/Controller/IController.java" />
         <option value="$PROJECT_DIR$/src/Visual/HomeView.java" />
+        <option value="$PROJECT_DIR$/src/Cards/Card.java" />
         <option value="$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java" />
+        <option value="$PROJECT_DIR$/src/Cards/ICard.java" />
       </list>
     </option>
   </component>
@@ -290,7 +312,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544644038287" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544644597495" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -330,12 +352,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544581962428</updated>
-      <workItem from="1544581965668" duration="19048000" />
+      <workItem from="1544581965668" duration="19413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19048000" />
+    <option name="totallyTimeSpent" value="19413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -346,7 +368,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Learn" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.14520743" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.14520743" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="0" />
@@ -355,7 +377,7 @@
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -386,13 +408,6 @@
             <caret line="3" column="90" selection-start-line="3" selection-start-column="90" selection-end-line="3" selection-end-column="90" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cards/ICard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -432,16 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cards/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="21" column="89" selection-start-line="21" selection-start-column="89" selection-end-line="21" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/IController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -455,7 +460,7 @@
     <entry file="file://$PROJECT_DIR$/src/Controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="618">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -465,7 +470,7 @@
     <entry file="file://$PROJECT_DIR$/src/Visual/MenuPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1075">
-          <caret line="167" selection-start-line="167" selection-end-line="167" />
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4013#4014#0" expanded="true" />
@@ -480,10 +485,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visual/MainPanels/MyCardsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visual/HomeView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
-          <caret line="134" column="2" lean-forward="true" selection-start-line="134" selection-start-column="2" selection-end-line="134" selection-end-column="2" />
+          <caret line="127" column="2" selection-start-line="127" selection-start-column="2" selection-end-line="127" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1081#1082#0" expanded="true" />
@@ -502,20 +517,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Visual/MainPanels/MyCardsPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="92" column="6" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
+        <state relative-caret-position="214">
+          <caret line="120" selection-start-line="120" selection-end-line="120" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2061#2062#0" expanded="true" />
@@ -541,6 +546,31 @@
             <element signature="e#4023#4024#0" expanded="true" />
             <element signature="e#4050#4051#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cards/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="63" selection-start-line="63" selection-end-line="77" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="e#1440#1441#0" expanded="true" />
+            <element signature="e#1470#1471#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+            <element signature="e#1552#1553#0" expanded="true" />
+            <element signature="e#1592#1593#0" expanded="true" />
+            <element signature="e#1620#1621#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cards/ICard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

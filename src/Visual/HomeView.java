@@ -31,7 +31,6 @@ public class HomeView extends JFrame {
   private Color MAIA_LOGO_COLOR;
 
 
-
   //ICard card
   public HomeView() {
     super();
@@ -40,10 +39,10 @@ public class HomeView extends JFrame {
     this.setTitle("- daployer -");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    this.setPreferredSize(new Dimension(1000,1000));
+    this.setPreferredSize(new Dimension(1000, 1000));
 
-    this.MAIA_BG_COLOR = new Color(40,45,51);
-    this.MAIA_LOGO_COLOR = new Color(144,195,240);
+    this.MAIA_BG_COLOR = new Color(40, 45, 51);
+    this.MAIA_LOGO_COLOR = new Color(144, 195, 240);
 
     //this.setBackground(MAIA_BG_COLOR);
 
@@ -57,9 +56,6 @@ public class HomeView extends JFrame {
 
     basePanel = new JPanel(new CardLayout());
     this.add(basePanel, BorderLayout.EAST);
-
-
-
 
 
     //--------
@@ -77,9 +73,6 @@ public class HomeView extends JFrame {
     basePanel.add(explorePanel, "explorePanel");
     //this.add(explorePanel, BorderLayout.EAST);
     //explorePanel.setVisible(false);
-
-
-
 
 
     //Making it Visible
@@ -136,9 +129,6 @@ public class HomeView extends JFrame {
 //  }
 
 
-
-
-
   public void setActionListener(ActionListener listen) {
 
     this.getMenuPanel().getMyCardsButton().addActionListener(listen);
@@ -150,12 +140,7 @@ public class HomeView extends JFrame {
     this.getCreatePanel().getCreateCard().addActionListener(listen);
 
 
-
-
-
-
   }
-
 
 
 }

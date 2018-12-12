@@ -15,7 +15,7 @@ import javax.swing.border.Border;
 /**
  * Represents the Main Screen
  */
-public class MenuPanel extends JPanel  {
+public class MenuPanel extends JPanel {
   private Color MAIA_BG_COLOR;
   private Color MAIA_LOGO_COLOR;
   private BufferedImage maia_LOGO;
@@ -27,23 +27,19 @@ public class MenuPanel extends JPanel  {
   public MenuPanel() {
     super();
 
-    this.MAIA_BG_COLOR = new Color(40,45,51);
-    this.MAIA_LOGO_COLOR = new Color(144,195,240);
+    this.MAIA_BG_COLOR = new Color(40, 45, 51);
+    this.MAIA_LOGO_COLOR = new Color(144, 195, 240);
 
-    this.setPreferredSize(new Dimension(200,1000));
+    this.setPreferredSize(new Dimension(200, 1000));
     this.setBackground(MAIA_BG_COLOR);
 
     //TODO: DEBATE WHETHER TO COMMENT THIS OUT
     //this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 
 
-
-
     Border border = BorderFactory.createMatteBorder(6, 6, 6, 3,
             MAIA_LOGO_COLOR);
     this.setBorder(border);
-
-
 
 
     //---------------------------------------------------------------------------------------------
@@ -64,8 +60,6 @@ public class MenuPanel extends JPanel  {
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
-
-
 
 
     //---------------------------------------------------------------------------------------------
@@ -90,7 +84,6 @@ public class MenuPanel extends JPanel  {
     //this.add(createButton);
 
 
-
     //this.add(Box.createRigidArea(new Dimension(5,50)));
 
 
@@ -101,7 +94,6 @@ public class MenuPanel extends JPanel  {
     JPanel cardsPanel = new JPanel();
     //cardsPanel.setSize(new Dimension(200,60));
     cardsPanel.setBackground(MAIA_BG_COLOR);
-
 
 
     myCardsButton = new JButton("   My Cards   ");
@@ -116,7 +108,6 @@ public class MenuPanel extends JPanel  {
     cardsPanel.add(myCardsButton);
     this.add(cardsPanel);
     //this.add(myCardsButton);
-
 
 
     //this.add(Box.createRigidArea(new Dimension(5,50)));
@@ -162,11 +153,6 @@ public class MenuPanel extends JPanel  {
   public JButton getExploreButton() {
     return exploreButton;
   }
-
-
-
-
-
 
 
 }

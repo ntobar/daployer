@@ -37,10 +37,7 @@ public class ExplorePanel extends JPanel {
             MAIA_LOGO_COLOR));
 
 
-
-
   }
-
 
 
 }

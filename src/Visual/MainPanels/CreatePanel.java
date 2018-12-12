@@ -29,8 +29,7 @@ public class CreatePanel extends JPanel {
   private JFileChooser backgroundImgChooser;
   private JFileChooser logoImgChooser;
   private JFileChooser htmlChooser;
-
-
+  private String name;
 
 
   public CreatePanel() {
@@ -66,7 +65,6 @@ public class CreatePanel extends JPanel {
     descriptionLabel = new JLabel("Card Description");
 
 
-
     //---------------------------------------------------------------------------------------------
     //------------------------------------JTextFields Setup ---------------------------------------
     //---------------------------------------------------------------------------------------------
@@ -83,18 +81,16 @@ public class CreatePanel extends JPanel {
 
       @Override
       public void focusLost(FocusEvent e) {
-        //nameText = ((JTextField)e.getSource()).getText();
+        String nameText = ((JTextField) e.getSource()).getText();
 
       }
     });
-
 
 
     //this.card = new Card(name);
 
     titleField = new JTextField();
     titleField.setColumns(10);
-
 
 
     //---------------------------------------------------------------------------------------------
@@ -116,14 +112,16 @@ public class CreatePanel extends JPanel {
     this.add(chooseBackGroundImg);
 
 
-
-
-
     this.createCard = new JButton("Create Card");
     createCard.setActionCommand("createCardButton");
     this.add(createCard);
 
 
+  }
+
+  public void setName(String text) {
+
+    this.card.
 
   }
 

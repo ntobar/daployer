@@ -19,6 +19,7 @@ public abstract class Card implements ICard {
   private Image backgroundImage;
   private Image logoImage;
 
+
   //TODO: Implement this later , HTML description, Image backgroundImage, Image logoImage
   public Card(String name, String title) {
     super();
@@ -43,7 +44,7 @@ public abstract class Card implements ICard {
     JLabel nameLabel = new JLabel(name);
     JLabel titleLabel = new JLabel(title);
 
-    card.setSize(300,500);
+    card.setSize(300, 500);
 
     card.add(nameLabel);
     card.add(titleLabel);
@@ -58,12 +59,21 @@ public abstract class Card implements ICard {
     return card;
 
 
-
-
-
-
   }
 
+  public String getName() {
+    return name;
+  }
 
+  public String getTitle() {
+    return title;
+  }
 
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
 }

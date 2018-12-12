@@ -30,8 +30,7 @@ public class Controller implements IController {
     if (e.getActionCommand().equals("createButton")) {
 
 
-
-      CardLayout cl = (CardLayout)(homeView.getBasePanel().getLayout());
+      CardLayout cl = (CardLayout) (homeView.getBasePanel().getLayout());
       cl.show(homeView.getBasePanel(), "createPanel");
 
 //      if(!(homeView.getCreatePanel().isVisible())) {
@@ -45,13 +44,10 @@ public class Controller implements IController {
 //      homeView.makeInvisible(homeView.getCreatePanel(),homeView.getExplorePanel());
 
 
-
       //homeView.add(homeView.getMyCardsPanel(), BorderLayout.EAST);
 
 
     } else if (e.getActionCommand().equals("myCardsButton")) {
-
-
 
 
       CardLayout cl = (CardLayout) (homeView.getBasePanel().getLayout());
@@ -59,29 +55,20 @@ public class Controller implements IController {
       cl.show(homeView.getBasePanel(), "myCardsPanel");
 
 
-
     } else if (e.getActionCommand().equals("exploreButton")) {
-
-
 
 
       CardLayout cl = (CardLayout) (homeView.getBasePanel().getLayout());
       cl.show(homeView.getBasePanel(), "explorePanel");
 
 
-
     } else if (e.getActionCommand().equals("createCardButton")) {
-
-
 
 
       //TODO: Call card.createCard()
 
 
-
     } else if (e.getActionCommand().equals("chooseBGIMG")) {
-
-
 
 
       int returnVal = homeView.getCreatePanel().getBackgroundImgChooser().showOpenDialog(homeView);

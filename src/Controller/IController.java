@@ -10,6 +10,4 @@ public interface IController extends ActionListener {
   void actionPerformed(ActionEvent e);
 
 
-
-
 }
