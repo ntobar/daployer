@@ -19,6 +19,8 @@ public class HomeView extends JFrame {
   private MenuPanel menuPanel;
   private CreatePanel createPanel;
   private ICard card;
+  private Color MAIA_BG_COLOR;
+  private Color MAIA_LOGO_COLOR;
 
 
 
@@ -30,6 +32,11 @@ public class HomeView extends JFrame {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     this.setPreferredSize(new Dimension(1000,1000));
+
+    this.MAIA_BG_COLOR = new Color(40,45,51);
+    this.MAIA_LOGO_COLOR = new Color(144,195,240);
+
+    //this.setBackground(MAIA_BG_COLOR);
 
 
     this.card = card;

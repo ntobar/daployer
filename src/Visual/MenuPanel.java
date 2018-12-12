@@ -1,6 +1,7 @@
 package Visual;
 
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -22,6 +23,7 @@ public class MenuPanel extends JPanel  {
   private JButton createButton;
   private JButton exploreButton;
 
+
   public MenuPanel() {
     super();
 
@@ -30,7 +32,9 @@ public class MenuPanel extends JPanel  {
 
     this.setPreferredSize(new Dimension(200,1000));
     this.setBackground(MAIA_BG_COLOR);
-    this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+
+    //TODO: DEBATE WHETHER TO COMMENT THIS OUT
+    //this.setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 
 
 
@@ -62,47 +66,105 @@ public class MenuPanel extends JPanel  {
     //---------------------------------------------------------------------------------------------
 
 
-    this.add(Box.createRigidArea(new Dimension(5,50)));
 
 
-    createButton = new JButton("Create");
+    //---------------------------------------------------------------------------------------------
+    //----------------------------------- CREATE BUTTON -------------------------------------------
+    //---------------------------------------------------------------------------------------------
+    JPanel createPanel = new JPanel();
+    //createPanel.setSize(new Dimension(200,60));
+    createPanel.setBackground(MAIA_BG_COLOR);
+
+
+    createButton = new JButton("   Create   ");
+    createButton.setPreferredSize(new Dimension(190, 50));
     createButton.setOpaque(true);
     createButton.setBackground(MAIA_BG_COLOR);
     createButton.setForeground(MAIA_LOGO_COLOR);
     createButton.setBorder(BorderFactory.createBevelBorder(
             BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR,
             MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
-    this.add(createButton);
+    createButton.setActionCommand("createButton");
+    createPanel.add(createButton);
+    this.add(createPanel);
+    //this.add(createButton);
 
 
 
-    this.add(Box.createRigidArea(new Dimension(5,50)));
+    //this.add(Box.createRigidArea(new Dimension(5,50)));
+
+
+    //---------------------------------------------------------------------------------------------
+    //--------------------------------- MY CARDS BUTTON -------------------------------------------
+    //---------------------------------------------------------------------------------------------
+
+    JPanel cardsPanel = new JPanel();
+    //cardsPanel.setSize(new Dimension(200,60));
+    cardsPanel.setBackground(MAIA_BG_COLOR);
 
 
 
-    myCardsButton = new JButton("My Cards");
+    myCardsButton = new JButton("   My Cards   ");
+    myCardsButton.setPreferredSize(new Dimension(190, 50));
     myCardsButton.setOpaque(true);
     myCardsButton.setBackground(MAIA_BG_COLOR);
     myCardsButton.setForeground(MAIA_LOGO_COLOR);
     myCardsButton.setBorder(BorderFactory.createBevelBorder(
             BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR,
             MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
-    this.add(myCardsButton);
+    myCardsButton.setActionCommand("myCardsButton");
+    cardsPanel.add(myCardsButton);
+    this.add(cardsPanel);
+    //this.add(myCardsButton);
 
 
 
-    this.add(Box.createRigidArea(new Dimension(5,50)));
+    //this.add(Box.createRigidArea(new Dimension(5,50)));
 
 
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------- EXPLORE BUTTON -------------------------------------------
+    //---------------------------------------------------------------------------------------------
+    JPanel explorePanel = new JPanel();
+    //explorePanel.setSize(new Dimension(200,60));
+    explorePanel.setBackground(MAIA_BG_COLOR);
 
-    this.exploreButton = new JButton("Explore");
+
+    exploreButton = new JButton("   Explore   ");
+    exploreButton.setPreferredSize(new Dimension(190, 50));
     exploreButton.setOpaque(true);
     exploreButton.setBackground(MAIA_BG_COLOR);
     exploreButton.setForeground(MAIA_LOGO_COLOR);
     exploreButton.setBorder(BorderFactory.createBevelBorder(
             BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR,
             MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
-    this.add(exploreButton);
+    exploreButton.setActionCommand("exploreButton");
+    explorePanel.add(exploreButton);
+    this.add(explorePanel);
+    //this.add(exploreButton);
+
+
+  }
+
+
+  public BufferedImage getMaia_LOGO() {
+    return maia_LOGO;
+  }
+
+  public JButton getMyCardsButton() {
+    return myCardsButton;
+  }
+
+  public JButton getCreateButton() {
+    return createButton;
+  }
+
+  public JButton getExploreButton() {
+    return exploreButton;
+  }
+
+
+  public void setActionListener(ActionListener listen) {
 
 
 
