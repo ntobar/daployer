@@ -164,12 +164,7 @@ public class MenuPanel extends JPanel  {
   }
 
 
-  public void setActionListener(ActionListener listen) {
 
-
-
-
-  }
 
 
 

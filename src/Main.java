@@ -1,3 +1,5 @@
+import Controller.Controller;
+import Controller.IController;
 import Visual.HomeView;
 
 public class Main {
@@ -8,6 +10,7 @@ public class Main {
 
   public static void main(String[] args) {
     HomeView homeView = new HomeView();
+    IController controller = new Controller(homeView);
 
 
 

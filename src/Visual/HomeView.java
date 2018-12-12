@@ -2,14 +2,13 @@ package Visual;
 
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.awt.event.ActionListener;
 
 
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import Cards.ICard;
+import Visual.MainPanels.CreatePanel;
+import Visual.MainPanels.MyCardsPanel;
 
 
 /**
@@ -18,15 +17,19 @@ import Cards.ICard;
 public class HomeView extends JFrame {
   private MenuPanel menuPanel;
   private CreatePanel createPanel;
+
+
+  private MyCardsPanel myCardsPanel;
   private ICard card;
   private Color MAIA_BG_COLOR;
   private Color MAIA_LOGO_COLOR;
 
 
 
-//ICard card
+  //ICard card
   public HomeView() {
     super();
+
 
     this.setTitle("- daployer -");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,6 +50,9 @@ public class HomeView extends JFrame {
     createPanel = new CreatePanel();
     this.add(createPanel, BorderLayout.EAST);
 
+    myCardsPanel = new MyCardsPanel();
+
+
 
 
 
@@ -56,6 +62,35 @@ public class HomeView extends JFrame {
 
   }
 
+
+  public MenuPanel getMenuPanel() {
+    return menuPanel;
+  }
+
+  public CreatePanel getCreatePanel() {
+    return createPanel;
+  }
+
+  public MyCardsPanel getMyCardsPanel() {
+    return myCardsPanel;
+  }
+
+  public ICard getCard() {
+    return card;
+  }
+
+  public void setActionListener(ActionListener listen) {
+
+    this.getMenuPanel().getMyCardsButton().addActionListener(listen);
+    this.getMenuPanel().getCreateButton().addActionListener(listen);
+    this.getMenuPanel().getExploreButton().addActionListener(listen);
+
+    this.getCreatePanel().getChooseBackGroundImg().addActionListener(listen);
+
+
+
+
+  }
 
 
 
