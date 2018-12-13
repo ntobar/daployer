@@ -9,6 +9,7 @@ import java.io.File;
 import javax.swing.*;
 
 import Visual.HomeView;
+import components.HtmlDemo;
 
 import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
@@ -75,7 +76,6 @@ public class Controller implements IController {
       //TODO: Call card.createCard()
 
 
-
     } else if (e.getActionCommand().equals("chooseBGIMG")) {
 
 
@@ -118,11 +118,15 @@ public class Controller implements IController {
       }
 
 
+    } else if (e.getActionCommand().equals("HTMLLab")) {
+
+
+      HtmlDemo html = new HtmlDemo();
+      html.createAndShowGUI();
+      //this.homeView.getCreatePanel().add(html);
+
+
     }
-
-
-
-
   }
 
 

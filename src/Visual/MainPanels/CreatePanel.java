@@ -27,10 +27,13 @@ public class CreatePanel extends JPanel {
   private JButton chooseBackGroundImg;
   private JButton chooseLogoImg;
   private JButton chooseHTML;
+  private JButton createHTML;
   private JFileChooser backgroundImgChooser;
   private JFileChooser logoImgChooser;
   private JFileChooser htmlChooser;
   private String name;
+
+
 
 
   public CreatePanel() {
@@ -112,7 +115,7 @@ public class CreatePanel extends JPanel {
 
 
     //---------------------------------------------------------------------------------------------
-    //------------------------------------Order Setup -------------------------------------------
+    //------------------------------------Order Setup ---------------------------------------------
     //---------------------------------------------------------------------------------------------
 
     this.add(nameLabel);
@@ -134,6 +137,9 @@ public class CreatePanel extends JPanel {
 
 
 
+    //---------------------------------------------------------------------------------------------
+    //------------------------------------Button Setup --------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     chooseBackGroundImg = new JButton("Choose Background Image");
     chooseBackGroundImg.setActionCommand("chooseBGIMG");
@@ -146,6 +152,10 @@ public class CreatePanel extends JPanel {
     chooseHTML = new JButton("Choose HTML Files");
     chooseHTML.setActionCommand("chooseHTMLImage");
     this.add(chooseHTML);
+
+    createHTML = new JButton("HTML Lab");
+    createHTML.setActionCommand("HTMLLab");
+    this.add(createHTML);
 
 
     this.createCard = new JButton("Create Card");
@@ -218,5 +228,9 @@ public class CreatePanel extends JPanel {
 
   public JFileChooser getHtmlChooser() {
     return htmlChooser;
+  }
+
+  public JButton getCreateHTML() {
+    return createHTML;
   }
 }

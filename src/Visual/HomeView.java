@@ -128,6 +128,7 @@ public class HomeView extends JFrame {
     this.getCreatePanel().getCreateCard().addActionListener(listen);
     this.getCreatePanel().getChooseLogoImg().addActionListener(listen);
     this.getCreatePanel().getChooseHTML().addActionListener(listen);
+    this.getCreatePanel().getCreateHTML().addActionListener(listen);
 
 
   }
