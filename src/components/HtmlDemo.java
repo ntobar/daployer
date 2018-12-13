@@ -36,13 +36,22 @@ package components;
 /* HtmlDemo.java needs no other files. */
 
 import javax.swing.*;
+import javax.swing.text.html.HTML;
+import javax.swing.text.html.HTMLWriter;
+
 import java.awt.*;
 import java.awt.event.*;
+
+import Cards.ICard;
+import Cards.dAppCard;
 
 public class HtmlDemo extends JPanel
         implements ActionListener {
   JLabel theLabel;
   JTextArea htmlTextArea;
+  ICard card;
+  JFrame frame;
+
 
   public HtmlDemo() {
     setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
@@ -65,8 +74,16 @@ public class HtmlDemo extends JPanel
 
     JButton changeTheLabel = new JButton("Change the label");
     changeTheLabel.setMnemonic(KeyEvent.VK_C);
-    changeTheLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+    //changeTheLabel.setAlignmentX(Component.TOP_ALIGNMENT);
+    //changeTheLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+    changeTheLabel.setActionCommand("changeTheLabel");
     changeTheLabel.addActionListener(this);
+
+    JButton submitHTML = new JButton("Submit HTML");
+    submitHTML.setActionCommand("submitHTML");
+    //submitHTML.setAlignmentX(Component.BOTTOM_ALIGNMENT);
+    submitHTML.addActionListener(this);
+
 
     theLabel = new JLabel(initialText) {
       public Dimension getPreferredSize() {
@@ -91,6 +108,7 @@ public class HtmlDemo extends JPanel
     leftPanel.add(scrollPane);
     leftPanel.add(Box.createRigidArea(new Dimension(0,10)));
     leftPanel.add(changeTheLabel);
+    leftPanel.add(submitHTML);
 
     JPanel rightPanel = new JPanel();
     rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.PAGE_AXIS));
@@ -103,11 +121,24 @@ public class HtmlDemo extends JPanel
     add(leftPanel);
     add(Box.createRigidArea(new Dimension(10,0)));
     add(rightPanel);
+
+    card = new dAppCard();
+
   }
 
   //React to the user pushing the Change button.
   public void actionPerformed(ActionEvent e) {
-    theLabel.setText(htmlTextArea.getText());
+    if(e.getActionCommand().equals("changeTheLabel")) {
+      theLabel.setText(htmlTextArea.getText());
+    } else if(e.getActionCommand().equals("submitHTML")) {
+
+
+      card.setHtml(theLabel);
+      //card.setDescription(htmlTextArea.getText());
+
+
+
+    }
   }
 
   /**
@@ -117,16 +148,22 @@ public class HtmlDemo extends JPanel
    */
   public static void createAndShowGUI() {
     //Create and set up the window.
+
     JFrame frame = new JFrame("HtmlDemo");
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
     //Add content to the window.
     frame.add(new HtmlDemo());
+
+
 
     //Display the window.
     frame.pack();
     frame.setVisible(true);
   }
+
+
 
   public static void main(String[] args) {
     //Schedule a job for the event dispatch thread:
@@ -139,4 +176,11 @@ public class HtmlDemo extends JPanel
       }
     });
   }
+
+  public JLabel getHTMLContent() {
+
+    return theLabel;
+
+  }
+
 }

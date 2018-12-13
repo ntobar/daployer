@@ -4,9 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.Border;
 
 
@@ -32,6 +30,21 @@ public class MyCardsPanel extends JPanel {
     this.setBorder(BorderFactory.createTitledBorder(border,
             "My Cards", 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
+
+    String text = "<html>\n" +
+            "Color and font test:\n" +
+            "<ul>\n" +
+            "<li><font color=red>red</font>\n" +
+            "<li><font color=blue>blue</font>\n" +
+            "<li><font color=green>green</font>\n" +
+            "<li><font size=-2>small</font>\n" +
+            "<li><font size=+2>large</font>\n" +
+            "<li><i>italic</i>\n" +
+            "<li><b>bold</b>\n" +
+            "</ul>\n";
+    JLabel theLabel = new JLabel(text);
+
+    this.add(theLabel);
 
 
   }

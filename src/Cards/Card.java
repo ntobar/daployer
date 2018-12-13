@@ -19,6 +19,9 @@ public abstract class Card implements ICard {
   private Color MAIA_LOGO_COLOR;
   private String name;
   private String title;
+  private JLabel html;
+
+
   private HTML description;
   private Image backgroundImage;
   private BufferedImage logoImage;
@@ -134,4 +137,21 @@ public abstract class Card implements ICard {
   public void setTitle(String title) {
     this.title = title;
   }
+
+  public JLabel getHtml() {
+    return html;
+  }
+
+  public void setHtml(JLabel html) {
+    this.html = html;
+  }
+
+  public HTML getDescription() {
+    return description;
+  }
+
+  public void setDescription(HTML description) {
+    this.description = description;
+  }
+
 }
