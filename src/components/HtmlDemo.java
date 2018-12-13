@@ -36,6 +36,7 @@ package components;
 /* HtmlDemo.java needs no other files. */
 
 import javax.swing.*;
+import javax.swing.plaf.ColorUIResource;
 import javax.swing.text.html.HTML;
 import javax.swing.text.html.HTMLWriter;
 
@@ -50,7 +51,7 @@ public class HtmlDemo extends JPanel
   JLabel theLabel;
   JTextArea htmlTextArea;
   ICard card;
-  JFrame frame;
+
 
 
   public HtmlDemo() {
@@ -99,6 +100,7 @@ public class HtmlDemo extends JPanel
     theLabel.setVerticalAlignment(SwingConstants.CENTER);
     theLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
+
     JPanel leftPanel = new JPanel();
     leftPanel.setLayout(new BoxLayout(leftPanel, BoxLayout.PAGE_AXIS));
     leftPanel.setBorder(BorderFactory.createCompoundBorder(
@@ -134,6 +136,19 @@ public class HtmlDemo extends JPanel
 
 
       card.setHtml(theLabel);
+
+      UIManager uI = new UIManager();
+      uI.put("OptionPane.background", new ColorUIResource(144, 195, 240));
+      uI.put("Panel.background", new ColorUIResource(40, 45, 51));
+
+      String text = "<html> <span style='color:#90C3F0'>" +
+              "Your HTML has been added to your Card </span></html>";
+      JOptionPane.showMessageDialog(this,
+              text,
+              "HTML Confirmation", 0,
+              new ImageIcon(
+                      "/Users/nicolastobar/Desktop/daployer/src/Resources/maiaLOGO.png"));
+
       //card.setDescription(htmlTextArea.getText());
 
 
@@ -153,14 +168,26 @@ public class HtmlDemo extends JPanel
     //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
+    JButton exitGUI = new JButton("Submit and Exit");
+    exitGUI.addActionListener(e -> {
+     frame.dispose();
+    });
+
+
     //Add content to the window.
     frame.add(new HtmlDemo());
+
+
+
 
 
 
     //Display the window.
     frame.pack();
     frame.setVisible(true);
+
+
+
   }
 
 
@@ -177,10 +204,6 @@ public class HtmlDemo extends JPanel
     });
   }
 
-  public JLabel getHTMLContent() {
 
-    return theLabel;
-
-  }
 
 }
