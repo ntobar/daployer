@@ -1,7 +1,11 @@
 package Cards;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.text.html.HTML;
@@ -17,7 +21,7 @@ public abstract class Card implements ICard {
   private String title;
   private HTML description;
   private Image backgroundImage;
-  private Image logoImage;
+  private BufferedImage logoImage;
 
 
   //TODO: Implement this later , HTML description, Image backgroundImage, Image logoImage
@@ -37,24 +41,76 @@ public abstract class Card implements ICard {
 
   public JPanel createCard(String name, String title) {
 
-    JPanel card = new JPanel();
 
-    card.setLayout(new GridBagLayout());
+
+    JPanel card = new JPanel();
+    card.setLayout(new BoxLayout(card, BoxLayout.PAGE_AXIS));
+
+    //card.setLayout(new GridBagLayout());
 
     JLabel nameLabel = new JLabel(name + " ");
     JLabel titleLabel = new JLabel(title);
 
     card.setPreferredSize(new Dimension(300,500));
+    card.setBackground(Color.black);
+
+    JPanel bgLogoPanel = new JPanel();
+    bgLogoPanel.setPreferredSize(new Dimension(card.getPreferredSize().width, 100));
+
+
+    //---------------------------------------------------------------------------------------------
+    //------------------------------------Logo and Background--------------------------------------
+    //---------------------------------------------------------------------------------------------
+    try {
+
+      backgroundImage = ImageIO.read(new File(
+              "/Users/nicolastobar/Desktop/daployer/src/Resources/maiaLOGO.png"));
+
+      backgroundImage = backgroundImage.getScaledInstance(card.getPreferredSize().width,
+              bgLogoPanel.getPreferredSize().height, Image.SCALE_DEFAULT);
+      JLabel maiaLogoLabel = new JLabel(new ImageIcon(backgroundImage));
+      //maiaLogoLabel.setPreferredSize(new Dimension(card.getWidth(), 100));
+      bgLogoPanel.add(maiaLogoLabel);
 
 
 
-    card.add(nameLabel);
-    card.add(titleLabel);
+    } catch (IOException e) {
+
+      e.getMessage();
+
+    }
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     Border border = BorderFactory.createMatteBorder(6, 3, 6, 6,
             MAIA_LOGO_COLOR);
+
+
+    card.add(bgLogoPanel);
+
+    JPanel infoPanel = new JPanel();
+    infoPanel.setBackground(MAIA_BG_COLOR);
+    infoPanel.setBorder(BorderFactory.createTitledBorder(border,
+            name, 0, 0, Font.getFont(Font.DIALOG),
+            MAIA_LOGO_COLOR));
+
+    infoPanel.setPreferredSize(new Dimension(card.getPreferredSize().width, 400));
+
+    infoPanel.add(nameLabel);
+    infoPanel.add(titleLabel);
+
+    card.add(infoPanel);
+
+
+
+
+//    card.add(nameLabel);
+//    card.add(titleLabel);
+
+
     card.setBorder(BorderFactory.createTitledBorder(border,
-            title, 0, 0, Font.getFont(Font.DIALOG),
+            name, 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
 
 

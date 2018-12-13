@@ -92,8 +92,6 @@ public class CreatePanel extends JPanel {
 
 
 
-    //this.card = new Card(name);
-
     titleField = new JTextField();
     titleField.setColumns(10);
     titleField.addFocusListener(new FocusListener() {
@@ -124,12 +122,30 @@ public class CreatePanel extends JPanel {
     this.add(titleField);
 
     backgroundImgChooser = new JFileChooser();
-    //int returnVal = fc.showOpenDialog(aComponent);
+    backgroundImgChooser.setDialogTitle("Upload Background Image");
+
+    logoImgChooser = new JFileChooser();
+    logoImgChooser.setDialogTitle("Upload Logo Image");
+
+    htmlChooser = new JFileChooser();
+    htmlChooser.setDialogTitle("HTML Upload");
+    htmlChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+    htmlChooser.setAcceptAllFileFilterUsed(false);
+
+
 
 
     chooseBackGroundImg = new JButton("Choose Background Image");
     chooseBackGroundImg.setActionCommand("chooseBGIMG");
     this.add(chooseBackGroundImg);
+
+    chooseLogoImg = new JButton("Choose Logo Image");
+    chooseLogoImg.setActionCommand("chooseLogoImage");
+    this.add(chooseLogoImg);
+
+    chooseHTML = new JButton("Choose HTML Files");
+    chooseHTML.setActionCommand("chooseHTMLImage");
+    this.add(chooseHTML);
 
 
     this.createCard = new JButton("Create Card");
@@ -194,5 +210,13 @@ public class CreatePanel extends JPanel {
 
   public JTextField getTitleField() {
     return titleField;
+  }
+
+  public JButton getChooseHTML() {
+    return chooseHTML;
+  }
+
+  public JFileChooser getHtmlChooser() {
+    return htmlChooser;
   }
 }

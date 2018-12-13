@@ -64,13 +64,16 @@ public class Controller implements IController {
 
     } else if (e.getActionCommand().equals("createCardButton")) {
 
-      JPanel newCard = homeView.getCreatePanel().getCard().createCard(
-              homeView.getCreatePanel().getCard().getName(), homeView.getCreatePanel().getCard().getTitle());
+      String cardName = homeView.getCreatePanel().getCard().getName();
+      String cardTitle = homeView.getCreatePanel().getCard().getTitle();
+
+      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle);
       //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
       homeView.getMyCardsPanel().add(newCard);
 
 
       //TODO: Call card.createCard()
+
 
 
     } else if (e.getActionCommand().equals("chooseBGIMG")) {
@@ -80,7 +83,35 @@ public class Controller implements IController {
 
       if (returnVal == JFileChooser.APPROVE_OPTION) {
         File file = homeView.getCreatePanel().getBackgroundImgChooser().getSelectedFile();
-        //This is where a real application would open the file.
+
+        log.append("Opening: " + file.getName() + "." + "\n");
+      } else {
+        log.append("Open command cancelled by user." + "/n");
+      }
+
+
+    } else if (e.getActionCommand().equals("chooseLogoImage")) {
+
+
+      int returnVal = homeView.getCreatePanel().getLogoImgChooser().showOpenDialog(homeView);
+
+      if (returnVal == JFileChooser.APPROVE_OPTION) {
+        File file = homeView.getCreatePanel().getLogoImgChooser().getSelectedFile();
+
+        log.append("Opening: " + file.getName() + "." + "\n");
+      } else {
+        log.append("Open command cancelled by user." + "/n");
+      }
+
+
+    } else if (e.getActionCommand().equals("chooseHTMLImage")) {
+
+
+      int returnVal = homeView.getCreatePanel().getHtmlChooser().showOpenDialog(homeView);
+
+      if (returnVal == JFileChooser.APPROVE_OPTION) {
+        File file = homeView.getCreatePanel().getHtmlChooser().getSelectedFile();
+
         log.append("Opening: " + file.getName() + "." + "\n");
       } else {
         log.append("Open command cancelled by user." + "/n");
@@ -88,6 +119,8 @@ public class Controller implements IController {
 
 
     }
+
+
 
 
   }

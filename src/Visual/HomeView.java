@@ -32,7 +32,6 @@ public class HomeView extends JFrame {
   private Color MAIA_LOGO_COLOR;
 
 
-  //ICard card
   public HomeView() {
     super();
 
@@ -82,10 +81,7 @@ public class HomeView extends JFrame {
 
   }
 
-  public void makeInvisible(JPanel panel1, JPanel panel2) {
-    panel1.setVisible(false);
-    panel2.setVisible(false);
-  }
+
 
 
   public MenuPanel getMenuPanel() {
@@ -119,15 +115,6 @@ public class HomeView extends JFrame {
 
   }
 
-//  @Override
-//  public void focusGained(FocusEvent e) {
-//
-//  }
-//
-//  @Override
-//  public void focusLost(FocusEvent e) {
-//
-//  }
 
 
   public void setActionListener(ActionListener listen) {
@@ -139,6 +126,8 @@ public class HomeView extends JFrame {
     this.getCreatePanel().getChooseBackGroundImg().addActionListener(listen);
 
     this.getCreatePanel().getCreateCard().addActionListener(listen);
+    this.getCreatePanel().getChooseLogoImg().addActionListener(listen);
+    this.getCreatePanel().getChooseHTML().addActionListener(listen);
 
 
   }
