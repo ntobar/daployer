@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.io.File;
+import java.io.IOException;
 
 import javax.swing.*;
 
@@ -82,8 +83,11 @@ public class Controller implements IController {
       int returnVal = homeView.getCreatePanel().getBackgroundImgChooser().showOpenDialog(homeView);
 
       if (returnVal == JFileChooser.APPROVE_OPTION) {
+
         File file = homeView.getCreatePanel().getBackgroundImgChooser().getSelectedFile();
-        homeView.getCreatePanel().getCard().setBackgroundImage(file.getPath());
+
+          homeView.getCreatePanel().getCard().setBackgroundImage(file.getPath());
+
 
         log.append("Opening: " + file.getName() + "." + "\n");
       } else {

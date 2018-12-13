@@ -20,6 +20,8 @@ public abstract class Card implements ICard {
   private String name;
   private String title;
   private JLabel html;
+  private JPanel bgLogoPanel;
+  JPanel card;
 
 
   private HTML description;
@@ -37,7 +39,7 @@ public abstract class Card implements ICard {
     this.name = "";
     this.title = "";
     this.description = description;
-    this.backgroundImage = backgroundImage;
+    //this.backgroundImage = backgroundImage;
     this.logoImage = logoImage;
 
   }
@@ -48,7 +50,7 @@ public abstract class Card implements ICard {
 
 
 
-    JPanel card = new JPanel();
+    card = new JPanel();
     card.setLayout(new BoxLayout(card, BoxLayout.PAGE_AXIS));
 
     //card.setLayout(new GridBagLayout());
@@ -59,31 +61,31 @@ public abstract class Card implements ICard {
     card.setPreferredSize(new Dimension(300,500));
     card.setBackground(Color.black);
 
-    JPanel bgLogoPanel = new JPanel();
+    bgLogoPanel = new JPanel();
     bgLogoPanel.setPreferredSize(new Dimension(card.getPreferredSize().width, 100));
 
 
     //---------------------------------------------------------------------------------------------
     //------------------------------------Logo and Background--------------------------------------
     //---------------------------------------------------------------------------------------------
-    try {
-
-      backgroundImage = ImageIO.read(new File(
-              "/Users/nicolastobar/Desktop/daployer/src/Resources/maiaLOGO.png"));
-
-      backgroundImage = backgroundImage.getScaledInstance(card.getPreferredSize().width,
-              bgLogoPanel.getPreferredSize().height, Image.SCALE_DEFAULT);
-      JLabel maiaLogoLabel = new JLabel(new ImageIcon(backgroundImage));
-      //maiaLogoLabel.setPreferredSize(new Dimension(card.getWidth(), 100));
-      bgLogoPanel.add(maiaLogoLabel);
-
-
-
-    } catch (IOException e) {
-
-      e.getMessage();
-
-    }
+//    try {
+//
+//      backgroundImage = ImageIO.read(new File(
+//              "/Users/nicolastobar/Desktop/daployer/src/Resources/maiaLOGO.png"));
+//
+//      backgroundImage = backgroundImage.getScaledInstance(card.getPreferredSize().width,
+//              bgLogoPanel.getPreferredSize().height, Image.SCALE_DEFAULT);
+//      JLabel maiaLogoLabel = new JLabel(new ImageIcon(backgroundImage));
+//      //maiaLogoLabel.setPreferredSize(new Dimension(card.getWidth(), 100));
+//      bgLogoPanel.add(maiaLogoLabel);
+//
+//
+//
+//    } catch (IOException e) {
+//
+//      e.getMessage();
+//
+//    }
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
@@ -158,11 +160,23 @@ public abstract class Card implements ICard {
 
 
   public void setBackgroundImage(String pathName) {
+    //try {
     try {
-      this.backgroundImage = ImageIO.read(new File(pathName));
+      backgroundImage = ImageIO.read(new File(pathName));
+      System.out.println(backgroundImage);
+//      backgroundImage = backgroundImage.getScaledInstance(card.getPreferredSize().width,
+//              bgLogoPanel.getPreferredSize().height, Image.SCALE_DEFAULT);
+      JLabel maiaLogoLabel = new JLabel(new ImageIcon(backgroundImage));
+      //maiaLogoLabel.setPreferredSize(new Dimension(card.getWidth(), 100));
+      bgLogoPanel.add(maiaLogoLabel);
     } catch (IOException e) {
       e.printStackTrace();
     }
+
+//    } catch (IOException e) {
+//      System.out.println(e.getMessage());
+//      e.printStackTrace();
+//    }
   }
 
   public void setLogoImage(BufferedImage logoImage) {
