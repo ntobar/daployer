@@ -1,5 +1,8 @@
 package Cards;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
+
 import javax.swing.*;
 import javax.swing.text.html.HTML;
 
@@ -25,6 +28,10 @@ public interface ICard {
   HTML getDescription();
 
   void setDescription(HTML description);
+
+  void setBackgroundImage(String pathName);
+
+  void setLogoImage(BufferedImage logoImage);
 
 
 }

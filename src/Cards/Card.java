@@ -42,6 +42,8 @@ public abstract class Card implements ICard {
 
   }
 
+
+
   public JPanel createCard(String name, String title) {
 
 
@@ -154,4 +156,16 @@ public abstract class Card implements ICard {
     this.description = description;
   }
 
+
+  public void setBackgroundImage(String pathName) {
+    try {
+      this.backgroundImage = ImageIO.read(new File(pathName));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  public void setLogoImage(BufferedImage logoImage) {
+    this.logoImage = logoImage;
+  }
 }

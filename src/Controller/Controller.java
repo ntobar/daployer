@@ -83,6 +83,7 @@ public class Controller implements IController {
 
       if (returnVal == JFileChooser.APPROVE_OPTION) {
         File file = homeView.getCreatePanel().getBackgroundImgChooser().getSelectedFile();
+        homeView.getCreatePanel().getCard().setBackgroundImage(file.getPath());
 
         log.append("Opening: " + file.getName() + "." + "\n");
       } else {

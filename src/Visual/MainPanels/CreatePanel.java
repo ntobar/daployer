@@ -7,8 +7,11 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 import Cards.Card;
 import Cards.ICard;
@@ -125,6 +128,10 @@ public class CreatePanel extends JPanel {
     this.add(titleField);
 
     backgroundImgChooser = new JFileChooser();
+    backgroundImgChooser.setAcceptAllFileFilterUsed(false);
+    FileFilter imageFilter = new FileNameExtensionFilter(
+            "Image files", ImageIO.getReaderFileSuffixes());
+    backgroundImgChooser.addChoosableFileFilter(imageFilter);
     backgroundImgChooser.setDialogTitle("Upload Background Image");
 
     logoImgChooser = new JFileChooser();
@@ -134,6 +141,8 @@ public class CreatePanel extends JPanel {
     htmlChooser.setDialogTitle("HTML Upload");
     htmlChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
     htmlChooser.setAcceptAllFileFilterUsed(false);
+
+
 
 
 
