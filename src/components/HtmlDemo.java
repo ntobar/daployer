@@ -141,7 +141,7 @@ public class HtmlDemo extends JPanel
 
       String newText = "<html>\n" +
               "<p>Never worry about knowing&nbsp;<br>HTML ever again</p>\n" +
-              "<p>At last, you can simply write what you wish&nbsp;and have it&nbsp;converted&nbsp;\n" +
+              "<p>At last, you can simply write what you wish&nbsp;and have it&nbsp;converted!&nbsp;\n" +
               "<br>It is easier than ever to make a beautiful description.&nbsp;Just input&nbsp;your text to see&nbsp;\n" +
               "<br>the magic&nbsp;happen.</p><ul><li><p>Text to HTML.\n" +
               "</p>\n" +
