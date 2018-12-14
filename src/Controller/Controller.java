@@ -71,23 +71,37 @@ public class Controller implements IController {
       String pathName = homeView.getCreatePanel().getCard().getPathName();
       String description = homeView.getCreatePanel().getCard().getDescription();
 
-      String errorMsg = "Please fill in the Card Name field and Card Title field";
+      String errorMsg1 = "Please fill in the Card Name field and Card Title field";
+      String errorMsg2 = "Are you sure you want to create a Card with no images or description?";
+
+
 
       if(cardName.equals("") || cardTitle.equals("")) {
-        JOptionPane.showMessageDialog(this.homeView, errorMsg);
+        JOptionPane.showMessageDialog(this.homeView, errorMsg1);
       } else {
 
 
-        JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName, description);
+        if (pathName.equals("") || description.equals("")) {
+
+          int dialogButton = JOptionPane.YES_NO_OPTION;
+
+          int dialogResult = JOptionPane.showConfirmDialog(null,
+                  errorMsg2, "Warning", dialogButton);
+          if (dialogResult == JOptionPane.YES_OPTION) {
+
+
+            JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle,
+                    pathName, description);
 
 
 //      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
-        //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
-        homeView.getMyCardsPanel().add(newCard);
+            //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
+            homeView.getMyCardsPanel().add(newCard);
+          }
+        }
       }
 
 
-      //TODO: Call card.createCard()
 
 
     } else if (e.getActionCommand().equals("chooseBGIMG")) {
