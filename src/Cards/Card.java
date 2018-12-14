@@ -71,7 +71,7 @@ public abstract class Card implements ICard {
     JLabel nameLabel = new JLabel(name + " ");
     JLabel titleLabel = new JLabel(title);
 
-    card.setPreferredSize(new Dimension(300,500));
+    card.setPreferredSize(new Dimension(400,600));
     card.setBackground(Color.black);
 
 
@@ -80,26 +80,9 @@ public abstract class Card implements ICard {
 //    //---------------------------------------------------------------------------------------------
 //    //------------------------------------Logo and Background--------------------------------------
 //    //---------------------------------------------------------------------------------------------
-//
-//    icon = new ImageIcon();
-//
-//    JLabel maiaLogoLabel = new JLabel(icon);
-
-    //JLabel maiaLogoLabel = new JLabel(new ImageIcon(backgroundImage));
-//    bgLogoPanel.add(maiaLogoLabel);
 
     bgLogoPanel = new JPanel();
-    bgLogoPanel.setPreferredSize(new Dimension(card.getPreferredSize().width, 100));
-
-    try {
-      JLabel testLabel = new JLabel(new ImageIcon(ImageIO.read(new File("/Users/nicolastobar/Desktop/daployer/src/Resources/maiaLOGO.png"))));
-      //bgLogoPanel.add(testLabel);
-
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-
-
+    bgLogoPanel.setPreferredSize(new Dimension(card.getPreferredSize().width, 200));
 
 
 
@@ -109,8 +92,6 @@ public abstract class Card implements ICard {
 
 
 
-      File file = new File(pName);
-      System.out.println(pName);
 
 
 
@@ -122,10 +103,18 @@ public abstract class Card implements ICard {
               bgLogoPanel.getPreferredSize().height, Image.SCALE_DEFAULT);
 
 
+
+
+
+
 //      JLabel maiaLogoLabel = new JLabel(new ImageIcon(backgroundImage));
 
       //JLabel maiaLogoLabel = new JLabel(new ImageIcon(ImageIO.read(new File(pName))));
       JLabel maiaLogoLabel = new JLabel(new ImageIcon(backgroundImage));
+
+      JLabel testLabel = new JLabel("DEMO");
+      testLabel.setPreferredSize(new Dimension(50,50));
+      maiaLogoLabel.add(testLabel);
       //maiaLogoLabel.setPreferredSize(new Dimension(card.getWidth(), 100));
       bgLogoPanel.add(maiaLogoLabel);
 
@@ -151,7 +140,8 @@ public abstract class Card implements ICard {
 
 
     JPanel infoPanel = new JPanel();
-    infoPanel.setBackground(MAIA_BG_COLOR);
+    infoPanel.setBackground(Color.gray);
+    //infoPanel.setBackground(MAIA_BG_COLOR);
     infoPanel.setBorder(BorderFactory.createTitledBorder(border,
             name, 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
