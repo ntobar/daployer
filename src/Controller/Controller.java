@@ -68,8 +68,11 @@ public class Controller implements IController {
 
       String cardName = homeView.getCreatePanel().getCard().getName();
       String cardTitle = homeView.getCreatePanel().getCard().getTitle();
+      String pathName = homeView.getCreatePanel().getCard().getPathName();
 
-      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle);
+      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
+
+//      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
       //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
       homeView.getMyCardsPanel().add(newCard);
 
@@ -86,7 +89,11 @@ public class Controller implements IController {
 
         File file = homeView.getCreatePanel().getBackgroundImgChooser().getSelectedFile();
 
-          homeView.getCreatePanel().getCard().setBackgroundImage(file.getPath());
+        homeView.getCreatePanel().getCard().setPathName(file.getPath());
+        //homeView.getCreatePanel().getCard().set
+
+
+          //homeView.getCreatePanel().getCard().setBackgroundImage(file.getPath());
 
 
         log.append("Opening: " + file.getName() + "." + "\n");

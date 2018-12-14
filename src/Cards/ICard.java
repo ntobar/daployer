@@ -12,7 +12,7 @@ import javax.swing.text.html.HTML;
  */
 public interface ICard {
 
-  JPanel createCard(String name, String title);
+  JPanel createCard(String name, String title, String pName);
 
   String getName();
 
@@ -30,9 +30,13 @@ public interface ICard {
 
   void setDescription(HTML description);
 
-  void setBackgroundImage(String pathName);
+  //void setBackgroundImage(String pathName);
 
   void setLogoImage(BufferedImage logoImage);
+
+  void setPathName(String pathName);
+
+  String getPathName();
 
 
 }
