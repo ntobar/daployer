@@ -69,7 +69,7 @@ public class HtmlDemo extends JPanel
             "<li><b>bold</b>\n" +
             "</ul>\n";
 
-    htmlTextArea = new JTextArea(10, 20);
+    htmlTextArea = new JTextArea(20, 40);
     htmlTextArea.setText(initialText);
     JScrollPane scrollPane = new JScrollPane(htmlTextArea);
 
@@ -90,19 +90,21 @@ public class HtmlDemo extends JPanel
     otherTemplate.addActionListener(this);
 
 
-    theLabel = new JLabel(initialText) {
-      public Dimension getPreferredSize() {
-        return new Dimension(200, 200);
-      }
-      public Dimension getMinimumSize() {
-        return new Dimension(200, 200);
-      }
-      public Dimension getMaximumSize() {
-        return new Dimension(200, 200);
-      }
-    };
+    theLabel = new JLabel(initialText) ;
+//    {
+//      public Dimension getPreferredSize() {
+//        return new Dimension(200, 200);
+//      }
+//      public Dimension getMinimumSize() {
+//        return new Dimension(200, 200);
+//      }
+//      public Dimension getMaximumSize() {
+//        return new Dimension(200, 200);
+//      }
+//    };
     theLabel.setVerticalAlignment(SwingConstants.CENTER);
     theLabel.setHorizontalAlignment(SwingConstants.CENTER);
+    theLabel.setPreferredSize(new Dimension(300,500));
 
 
     JPanel leftPanel = new JPanel();
@@ -140,16 +142,25 @@ public class HtmlDemo extends JPanel
     } else if(e.getActionCommand().equals("otherTemplate")) {
 
       String newText = "<html>\n" +
-              "<p>Never worry about knowing&nbsp;<br>HTML ever again</p>\n" +
-              "<p>At last, you can simply write what you wish&nbsp;and have it&nbsp;converted!&nbsp;\n" +
-              "<br>It is easier than ever to make a beautiful description.&nbsp;Just input&nbsp;your text to see&nbsp;\n" +
-              "<br>the magic&nbsp;happen.</p><ul><li><p>Text to HTML.\n" +
+              "<p>Never worry about knowing<br>HTML ever again</p>\n" +
+              "<p>At last, you can simply write what you wish \n" +
+              "and have it converted instantly!\n" +
+              "<br>It is easier than ever to make a beautiful description.\n" +
+              "Just input your text to see\n" +
+              "<br>the magic happen." +
               "</p>\n" +
-              "</li>\n" +
-              "<li>" +
-              "\n<p>Convert to HTML on the Go.</p>\n" +
-              "</li>\n" +
-              "<li><p>Say goodbye ugly product descriptions.</p>\n</li>\n</ul>";
+              " <ul>\n" +
+              "  <li>\n" +
+              "   <p>Text to HTML.\n" +
+              "</p>\n" +
+              "  </li>\n" +
+              "  <li>\n" +
+              "<p>Convert to HTML on the Go.</p>\n" +
+              "  </li>\n" +
+              "  <li>\n" +
+              "<p>\n" +
+              "Say goodbye ugly product descriptions.\n" +
+              "</p>\n</li>\n</ul>";
 
       htmlTextArea.setText(newText);
 

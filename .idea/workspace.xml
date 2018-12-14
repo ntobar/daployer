@@ -48,13 +48,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11047" />
+          <entry key="java" value="11123" />
           <entry key="md" value="134" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11047" />
+          <entry key="JAVA" value="11123" />
           <entry key="Markdown" value="134" />
         </counts>
       </usages-collector>
@@ -179,8 +179,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/HtmlDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="143" column="94" selection-start-line="143" selection-start-column="94" selection-end-line="143" selection-end-column="94" />
+            <state relative-caret-position="415">
+              <caret line="160" column="15" selection-start-line="160" selection-start-column="15" selection-end-line="160" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6447#6448#0" expanded="true" />
@@ -314,7 +314,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544761244879" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544795006732" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -355,15 +355,16 @@
       <option name="presentableId" value="Default" />
       <updated>1544581962428</updated>
       <workItem from="1544581965668" duration="35423000" />
-      <workItem from="1544746353709" duration="11060000" />
+      <workItem from="1544746353709" duration="11577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46483000" />
+    <option name="totallyTimeSpent" value="47000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
@@ -575,8 +576,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HtmlDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="143" column="94" selection-start-line="143" selection-start-column="94" selection-end-line="143" selection-end-column="94" />
+        <state relative-caret-position="415">
+          <caret line="160" column="15" selection-start-line="160" selection-start-column="15" selection-end-line="160" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6447#6448#0" expanded="true" />
