@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.swing.*;
+import javax.swing.plaf.ColorUIResource;
 
 import Visual.HomeView;
 import components.HtmlDemo;
@@ -72,7 +73,8 @@ public class Controller implements IController {
       String description = homeView.getCreatePanel().getCard().getDescription();
 
       String errorMsg1 = "Please fill in the Card Name field and Card Title field";
-      String errorMsg2 = "Are you sure you want to create a Card with no images or description?";
+      String errorMsg2 = "<html> <span style='color:#90C3F0'>" +
+              "Are you sure you want to create a Card with no images or description? </span></html>";
 
 
 
@@ -85,8 +87,15 @@ public class Controller implements IController {
 
           int dialogButton = JOptionPane.YES_NO_OPTION;
 
+          UIManager uI = new UIManager();
+          uI.put("OptionPane.background", new ColorUIResource(144, 195, 240));
+          uI.put("Panel.background", new ColorUIResource(40, 45, 51));
+
+
+
           int dialogResult = JOptionPane.showConfirmDialog(null,
-                  errorMsg2, "Warning", dialogButton);
+                  errorMsg2, "Warning", dialogButton,JOptionPane.WARNING_MESSAGE,  new ImageIcon(
+                          "/Users/nicolastobar/Desktop/daployer/src/Resources/maiaLOGO.png"));
           if (dialogResult == JOptionPane.YES_OPTION) {
 
 
