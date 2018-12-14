@@ -21,16 +21,12 @@ public abstract class Card implements ICard {
   private String title;
   private JLabel html;
   private JPanel bgLogoPanel;
-  String pathName;
-  JPanel card;
-  JLabel maiaLogoLabel;
-  ImageIcon icon;
-  //File file;
-
-
+  private String pathName;
+  private JPanel card;
   private HTML description;
   private Image backgroundImage;
-  private BufferedImage logoImage;
+  private Image logoImage;
+
 
 
 
@@ -104,6 +100,10 @@ public abstract class Card implements ICard {
 
 
 
+      JLayeredPane layeredPane = new JLayeredPane();
+      layeredPane.setPreferredSize(new Dimension(50, 100));
+      layeredPane.setBorder(BorderFactory.createTitledBorder(
+              "Move the Mouse to Move Duke"));
 
 
 
@@ -113,7 +113,9 @@ public abstract class Card implements ICard {
       JLabel maiaLogoLabel = new JLabel(new ImageIcon(backgroundImage));
 
       JLabel testLabel = new JLabel("DEMO");
-      testLabel.setPreferredSize(new Dimension(50,50));
+      testLabel.setBackground(Color.MAGENTA);
+      testLabel.setForeground(Color.MAGENTA);
+
       maiaLogoLabel.add(testLabel);
       //maiaLogoLabel.setPreferredSize(new Dimension(card.getWidth(), 100));
       bgLogoPanel.add(maiaLogoLabel);
@@ -152,9 +154,6 @@ public abstract class Card implements ICard {
     infoPanel.add(titleLabel);
 
     card.add(infoPanel);
-
-
-
 
 
     card.setBorder(BorderFactory.createTitledBorder(border,
