@@ -71,15 +71,20 @@ public class Controller implements IController {
       String pathName = homeView.getCreatePanel().getCard().getPathName();
       String description = homeView.getCreatePanel().getCard().getDescription();
 
+      String errorMsg = "Please fill in the Card Name field and Card Title field";
+
+      if(cardName.equals("") || cardTitle.equals("")) {
+        JOptionPane.showMessageDialog(this.homeView, errorMsg);
+      } else {
 
 
-      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName, description);
-
+        JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName, description);
 
 
 //      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
-      //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
-      homeView.getMyCardsPanel().add(newCard);
+        //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
+        homeView.getMyCardsPanel().add(newCard);
+      }
 
 
       //TODO: Call card.createCard()

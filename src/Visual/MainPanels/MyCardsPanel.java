@@ -12,6 +12,9 @@ public class MyCardsPanel extends JPanel {
   private Color MAIA_BG_COLOR;
   private Color MAIA_LOGO_COLOR;
   private JButton addCard;
+  private JPanel panel1;
+  private JLayeredPane myPane;
+
 
   public MyCardsPanel() {
     super();
