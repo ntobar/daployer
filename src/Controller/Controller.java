@@ -69,8 +69,13 @@ public class Controller implements IController {
       String cardName = homeView.getCreatePanel().getCard().getName();
       String cardTitle = homeView.getCreatePanel().getCard().getTitle();
       String pathName = homeView.getCreatePanel().getCard().getPathName();
+      String description = homeView.getCreatePanel().getCard().getDescription();
 
-      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
+
+
+      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName, description);
+
+
 
 //      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
       //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
@@ -134,6 +139,8 @@ public class Controller implements IController {
 
 
       HtmlDemo html = new HtmlDemo();
+      homeView.getCreatePanel().getCard().setDescription(html.giveHTML());
+      System.out.println(html.giveHTML());
       html.createAndShowGUI();
       //this.homeView.getCreatePanel().add(html);
 

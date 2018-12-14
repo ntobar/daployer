@@ -1,10 +1,12 @@
 package Cards;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -23,7 +25,7 @@ public abstract class Card implements ICard {
   private JPanel bgLogoPanel;
   private String pathName;
   private JPanel card;
-  private HTML description;
+  private String description;
   private Image backgroundImage;
   private Image logoImage;
 
@@ -46,16 +48,15 @@ public abstract class Card implements ICard {
 //    }
     this.name = "";
     this.title = "";
-    this.description = description;
-    //this.backgroundImage = backgroundImage;
-    this.logoImage = logoImage;
+    this.description = "";
     this.pathName = "";
+    this.html = new JLabel();
 
   }
 
 
 
-  public JPanel createCard(String name, String title, String pName) {
+  public JPanel createCard(String name, String title, String pName, String descriptiona) {
 
 
 
@@ -100,10 +101,7 @@ public abstract class Card implements ICard {
 
 
 
-      JLayeredPane layeredPane = new JLayeredPane();
-      layeredPane.setPreferredSize(new Dimension(50, 100));
-      layeredPane.setBorder(BorderFactory.createTitledBorder(
-              "Move the Mouse to Move Duke"));
+
 
 
 
@@ -116,9 +114,13 @@ public abstract class Card implements ICard {
       testLabel.setBackground(Color.MAGENTA);
       testLabel.setForeground(Color.MAGENTA);
 
-      maiaLogoLabel.add(testLabel);
       //maiaLogoLabel.setPreferredSize(new Dimension(card.getWidth(), 100));
+
+      //layeredPane.add(testLabel,  new Integer(3), 1);
+
+
       bgLogoPanel.add(maiaLogoLabel);
+
 
 
       card.add(bgLogoPanel);
@@ -152,6 +154,16 @@ public abstract class Card implements ICard {
 
     infoPanel.add(nameLabel);
     infoPanel.add(titleLabel);
+
+
+    descriptiona = description;
+
+    JLabel theLabel = new JLabel(descriptiona);
+    System.out.println("desc" + descriptiona);
+    theLabel.setVerticalAlignment(SwingConstants.CENTER);
+    theLabel.setHorizontalAlignment(SwingConstants.CENTER);
+
+    infoPanel.add(theLabel);
 
     card.add(infoPanel);
 
@@ -190,12 +202,12 @@ public abstract class Card implements ICard {
     this.html = html;
   }
 
-  public HTML getDescription() {
+  public String getDescription() {
     return description;
   }
 
-  public void setDescription(HTML description) {
-    this.description = description;
+  public void setDescription(String descriptiona) {
+    this.description = descriptiona;
   }
 
   public void setPathName(String pathName) {

@@ -43,18 +43,18 @@ import javax.swing.text.html.HTMLWriter;
 import java.awt.*;
 import java.awt.event.*;
 
-import Cards.ICard;
-import Cards.dAppCard;
 
 public class HtmlDemo extends JPanel
         implements ActionListener {
   JLabel theLabel;
   JTextArea htmlTextArea;
-  ICard card;
+
+
 
 
 
   public HtmlDemo() {
+
     setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
 
     String initialText = "<html>\n" +
@@ -85,6 +85,10 @@ public class HtmlDemo extends JPanel
     //submitHTML.setAlignmentX(Component.BOTTOM_ALIGNMENT);
     submitHTML.addActionListener(this);
 
+    JButton otherTemplate = new JButton("Want another Template?");
+    otherTemplate.setActionCommand("otherTemplate");
+    otherTemplate.addActionListener(this);
+
 
     theLabel = new JLabel(initialText) {
       public Dimension getPreferredSize() {
@@ -110,6 +114,7 @@ public class HtmlDemo extends JPanel
     leftPanel.add(scrollPane);
     leftPanel.add(Box.createRigidArea(new Dimension(0,10)));
     leftPanel.add(changeTheLabel);
+    leftPanel.add(otherTemplate);
     leftPanel.add(submitHTML);
 
     JPanel rightPanel = new JPanel();
@@ -124,7 +129,7 @@ public class HtmlDemo extends JPanel
     add(Box.createRigidArea(new Dimension(10,0)));
     add(rightPanel);
 
-    card = new dAppCard();
+    //card = new dAppCard();
 
   }
 
@@ -132,10 +137,27 @@ public class HtmlDemo extends JPanel
   public void actionPerformed(ActionEvent e) {
     if(e.getActionCommand().equals("changeTheLabel")) {
       theLabel.setText(htmlTextArea.getText());
+    } else if(e.getActionCommand().equals("otherTemplate")) {
+
+      String newText = "<html>\n" +
+              "<p>Never worry about knowing&nbsp;<br>HTML ever again</p>\n" +
+              "<p>At last, you can simply write what you wish&nbsp;and have it&nbsp;converted&nbsp;\n" +
+              "<br>It is easier than ever to make a beautiful description.&nbsp;Just input&nbsp;your text to see&nbsp;\n" +
+              "<br>the magic&nbsp;happen.</p><ul><li><p>Text to HTML.\n" +
+              "</p>\n" +
+              "</li>\n" +
+              "<li>" +
+              "\n<p>Convert to HTML on the Go.</p>\n" +
+              "</li>\n" +
+              "<li><p>Say goodbye ugly product descriptions.</p>\n</li>\n</ul>";
+
+      htmlTextArea.setText(newText);
+
+
+
     } else if(e.getActionCommand().equals("submitHTML")) {
 
 
-      card.setHtml(theLabel);
 
       UIManager uI = new UIManager();
       uI.put("OptionPane.background", new ColorUIResource(144, 195, 240));
@@ -190,6 +212,11 @@ public class HtmlDemo extends JPanel
 
   }
 
+
+
+  public String giveHTML() {
+    return theLabel.getText();
+  }
 
 
   public static void main(String[] args) {
