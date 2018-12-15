@@ -34,6 +34,8 @@ public class MyCardsPanel extends JPanel {
             "My Cards", 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
 
+    
+
 
 
 

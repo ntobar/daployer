@@ -32,6 +32,7 @@ public abstract class Card implements ICard {
 
 
 
+  //TODO: have to implement new HTML template to be shown
 
   //TODO: Implement this later , HTML description, Image backgroundImage, Image logoImage
   public Card() {

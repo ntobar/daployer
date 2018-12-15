@@ -72,30 +72,31 @@ public class Controller implements IController {
       String pathName = homeView.getCreatePanel().getCard().getPathName();
       String description = homeView.getCreatePanel().getCard().getDescription();
 
-      String errorMsg1 = "Please fill in the Card Name field and Card Title field";
+      String errorMsg1 = "<html> <span style='color:#90C3F0'>" +
+              "Please fill in the Card Name field and Card Title field </span></html>";
       String errorMsg2 = "<html> <span style='color:#90C3F0'>" +
               "Are you sure you want to create a Card with no images or description? </span></html>";
 
 
+      UIManager uI = new UIManager();
+      uI.put("OptionPane.background", new ColorUIResource(144, 195, 240));
+      uI.put("Panel.background", new ColorUIResource(40, 45, 51));
+
+      ImageIcon MAIA_ERROR_MSG = new ImageIcon(
+              "/Users/nicolastobar/Desktop/daployer/src/Resources/maiaLOGO.png");
+
 
       if(cardName.equals("") || cardTitle.equals("")) {
-        JOptionPane.showMessageDialog(this.homeView, errorMsg1);
-      } else {
-
-
-        if (pathName.equals("") || description.equals("")) {
+        JOptionPane.showMessageDialog(this.homeView, errorMsg1, "Error",
+                JOptionPane.ERROR_MESSAGE, MAIA_ERROR_MSG);
+      } else if (pathName.equals("") || description.equals("")) {
 
           int dialogButton = JOptionPane.YES_NO_OPTION;
 
-          UIManager uI = new UIManager();
-          uI.put("OptionPane.background", new ColorUIResource(144, 195, 240));
-          uI.put("Panel.background", new ColorUIResource(40, 45, 51));
-
-
 
           int dialogResult = JOptionPane.showConfirmDialog(null,
-                  errorMsg2, "Warning", dialogButton,JOptionPane.WARNING_MESSAGE,  new ImageIcon(
-                          "/Users/nicolastobar/Desktop/daployer/src/Resources/maiaLOGO.png"));
+                  errorMsg2, "Warning", dialogButton, JOptionPane.WARNING_MESSAGE, MAIA_ERROR_MSG);
+
           if (dialogResult == JOptionPane.YES_OPTION) {
 
 
@@ -106,8 +107,19 @@ public class Controller implements IController {
 //      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
             //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
             homeView.getMyCardsPanel().add(newCard);
+          } else {
+
+            JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle,
+                    pathName, description);
+
+
+//      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
+            //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
+            homeView.getMyCardsPanel().add(newCard);
           }
-        }
+
+
+
       }
 
 
