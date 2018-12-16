@@ -1,8 +1,6 @@
 package Visual.MainPanels;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
+import java.awt.*;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -32,6 +30,8 @@ public class MyCardsPanel extends JPanel {
 
     this.setBackground(MAIA_BG_COLOR);
 
+    this.setLayout(new BorderLayout());
+
 
     Border border = BorderFactory.createMatteBorder(6, 3, 6, 6,
             MAIA_LOGO_COLOR);
@@ -49,15 +49,37 @@ public class MyCardsPanel extends JPanel {
 
 
 
+
+    this.add(cardPane);
+
+
+
+  }
+
+  public ArrayList<JPanel> getCards() {
+    return cards;
   }
 
   public void updateCards() {
+    //TODO: NEED TO FIX WHAT HAPPENS WHEN A LOT OF CARDS ARE ADDED AND IT OVERFLOWS, WHERE THEY GO
+    //TODO: MAYBE SCROLLPANE?
     int size = this.cards.size();
 
+    int x = 200;
+    int y = 10;
+
+    System.out.println("cards: " + this.cards);
     for(int i = 0; i < size; i++) {
-      cardPane.add(this.cards.get(i), new Integer(i));
+      this.cards.get(i).setBounds(x, y, 400, 600);
+
+      x = x + 50;
+      y = y + 50;
+      cardPane.add(this.cards.get(i), i);
+//      cardPane.add(this.cards.get(i), new Integer(i));
 
     }
+
+   // this.add(cardPane);
 
 
   }

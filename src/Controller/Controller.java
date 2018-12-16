@@ -86,41 +86,43 @@ public class Controller implements IController {
               "/Users/nicolastobar/Desktop/daployer/src/Resources/maiaLOGO.png");
 
 
-      if(cardName.equals("") || cardTitle.equals("")) {
-        JOptionPane.showMessageDialog(this.homeView, errorMsg1, "Error",
-                JOptionPane.ERROR_MESSAGE, MAIA_ERROR_MSG);
-      } else if (pathName.equals("") || description.equals("")) {
+//      if(cardName.equals("") || cardTitle.equals("")) {
+//        JOptionPane.showMessageDialog(this.homeView, errorMsg1, "Error",
+//                JOptionPane.ERROR_MESSAGE, MAIA_ERROR_MSG);
+//      } else if (pathName.equals("") || description.equals("")) {
+//
+//          int dialogButton = JOptionPane.YES_NO_OPTION;
+//
+//
+//          int dialogResult = JOptionPane.showConfirmDialog(null,
+//                  errorMsg2, "Warning", dialogButton, JOptionPane.WARNING_MESSAGE, MAIA_ERROR_MSG);
+//
+//          if (dialogResult == JOptionPane.YES_OPTION) {
+//
+//
+//            JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle,
+//                    pathName, description);
+//
+//
+////      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
+//            //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
+//            homeView.getMyCardsPanel().add(newCard);
+//          } else {
+      System.out.println("Final loop in controller");
 
-          int dialogButton = JOptionPane.YES_NO_OPTION;
-
-
-          int dialogResult = JOptionPane.showConfirmDialog(null,
-                  errorMsg2, "Warning", dialogButton, JOptionPane.WARNING_MESSAGE, MAIA_ERROR_MSG);
-
-          if (dialogResult == JOptionPane.YES_OPTION) {
-
-
-            JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle,
-                    pathName, description);
+      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle,
+              pathName, description);
 
 
 //      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
-            //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
-            homeView.getMyCardsPanel().add(newCard);
-          } else {
-
-            JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle,
-                    pathName, description);
-
-
-//      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle, pathName);
-            //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
-            homeView.getMyCardsPanel().add(newCard);
-          }
+      //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
+      homeView.getMyCardsPanel().getCards().add(newCard);
+      homeView.getMyCardsPanel().updateCards();
+      //homeView.getMyCardsPanel().add(newCard);
+      //}
 
 
 
-      }
 
 
 
