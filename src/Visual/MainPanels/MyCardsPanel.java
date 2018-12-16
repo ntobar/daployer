@@ -18,6 +18,9 @@ public class MyCardsPanel extends JPanel {
   private JButton addCard;
   private JPanel panel1;
   private JLayeredPane cardPane;
+  private JButton button1;
+  private JPanel mainPanel;
+  private JPanel menuPanel;
 
 
   public MyCardsPanel() {
@@ -54,6 +57,7 @@ public class MyCardsPanel extends JPanel {
       @Override
       public void mouseClicked(MouseEvent e) {
 
+
       }
 
       @Override
@@ -78,6 +82,9 @@ public class MyCardsPanel extends JPanel {
     });
 
 
+
+
+
     this.add(cardPane);
 
 
@@ -91,7 +98,6 @@ public class MyCardsPanel extends JPanel {
   public void updateCards() {
     //TODO: NEED TO FIX WHAT HAPPENS WHEN A LOT OF CARDS ARE ADDED AND IT OVERFLOWS, WHERE THEY GO
     //TODO: MAYBE SCROLLPANE?
-    //TODO: Need to fix Order of layered Cards, newest ones first
 
     int size = this.cards.size();
 

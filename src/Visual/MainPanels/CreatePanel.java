@@ -1,22 +1,27 @@
 package Visual.MainPanels;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
-import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
-
-
 import javax.imageio.ImageIO;
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.Border;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
-import Cards.Card;
 import Cards.ICard;
 import Cards.dAppCard;
 
+
+/**
+ *
+ */
 public class CreatePanel extends JPanel {
   private Color MAIA_BG_COLOR;
   private Color MAIA_LOGO_COLOR;
@@ -68,9 +73,9 @@ public class CreatePanel extends JPanel {
     //------------------------------------JLabels Setup -------------------------------------------
     //---------------------------------------------------------------------------------------------
 
-    nameLabel = new JLabel("Card Name: ");
-    titleLabel = new JLabel("Card Title: ");
-    descriptionLabel = new JLabel("Card Description");
+    nameLabel = new JLabel("<html><font color=#90C3F0>Card Name: </font>");
+    titleLabel = new JLabel("<html><font color=#90C3F0>Card Title: </font>");
+    descriptionLabel = new JLabel("<html><font color=#90C3F0>Card Description: </font>");
 
 
     //---------------------------------------------------------------------------------------------

@@ -79,7 +79,7 @@ public abstract class Card implements ICard {
 //    //------------------------------------Logo and Background--------------------------------------
 //    //---------------------------------------------------------------------------------------------
 
-    JLayeredPane bgLogoPane = new JLayeredPane();
+    //JLayeredPane bgLogoPane = new JLayeredPane();
 
     bgLogoPanel = new JPanel();
     bgLogoPanel.setPreferredSize(new Dimension(card.getPreferredSize().width, 200));
@@ -123,13 +123,13 @@ public abstract class Card implements ICard {
 
 
 
-      bgLogoPane.add(maiaLogoLabel);
-      //bgLogoPanel.add(maiaLogoLabel);
+      //bgLogoPane.add(maiaLogoLabel);
+      bgLogoPanel.add(maiaLogoLabel);
 
 
 
-     // card.add(bgLogoPanel);
-      card.add(bgLogoPane);
+      card.add(bgLogoPanel);
+      //card.add(bgLogoPane);
 
     } catch (IOException e) {
 
