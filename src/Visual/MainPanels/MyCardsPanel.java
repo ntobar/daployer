@@ -53,7 +53,7 @@ public class MyCardsPanel extends JPanel {
     cardPane.addMouseListener(new MouseListener() {
       @Override
       public void mouseClicked(MouseEvent e) {
-        
+
       }
 
       @Override
@@ -103,7 +103,7 @@ public class MyCardsPanel extends JPanel {
 
       x = x + 50;
       y = y + 50;
-      cardPane.add(this.cards.get(i), new Integer(i));
+      cardPane.add(this.cards.get(i), new Integer(i), 0);
 //      cardPane.add(this.cards.get(i), new Integer(i));
 
     }
