@@ -1,6 +1,8 @@
 package Visual.MainPanels;
 
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -48,6 +50,32 @@ public class MyCardsPanel extends JPanel {
 
 
 
+    cardPane.addMouseListener(new MouseListener() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+        
+      }
+
+      @Override
+      public void mousePressed(MouseEvent e) {
+
+      }
+
+      @Override
+      public void mouseReleased(MouseEvent e) {
+
+      }
+
+      @Override
+      public void mouseEntered(MouseEvent e) {
+
+      }
+
+      @Override
+      public void mouseExited(MouseEvent e) {
+
+      }
+    });
 
 
     this.add(cardPane);
@@ -63,19 +91,19 @@ public class MyCardsPanel extends JPanel {
   public void updateCards() {
     //TODO: NEED TO FIX WHAT HAPPENS WHEN A LOT OF CARDS ARE ADDED AND IT OVERFLOWS, WHERE THEY GO
     //TODO: MAYBE SCROLLPANE?
-    
+    //TODO: Need to fix Order of layered Cards, newest ones first
+
     int size = this.cards.size();
 
     int x = 200;
     int y = 10;
 
-    System.out.println("cards: " + this.cards);
     for(int i = 0; i < size; i++) {
       this.cards.get(i).setBounds(x, y, 400, 600);
 
       x = x + 50;
       y = y + 50;
-      cardPane.add(this.cards.get(i), i);
+      cardPane.add(this.cards.get(i), new Integer(i));
 //      cardPane.add(this.cards.get(i), new Integer(i));
 
     }

@@ -67,6 +67,8 @@ public class Controller implements IController {
 
     } else if (e.getActionCommand().equals("createCardButton")) {
 
+      //TODO: need to handle empty fields/images, not now for sake of testing efficiency
+
       String cardName = homeView.getCreatePanel().getCard().getName();
       String cardTitle = homeView.getCreatePanel().getCard().getTitle();
       String pathName = homeView.getCreatePanel().getCard().getPathName();
@@ -108,7 +110,7 @@ public class Controller implements IController {
 //            //JPanel newCard = homeView.getCard().createCard(homeView.getCard().getName(), "Card1");
 //            homeView.getMyCardsPanel().add(newCard);
 //          } else {
-      System.out.println("Final loop in controller");
+
 
       JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle,
               pathName, description);
