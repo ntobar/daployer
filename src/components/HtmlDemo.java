@@ -35,13 +35,25 @@ package components;
 
 /* HtmlDemo.java needs no other files. */
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 import javax.swing.plaf.ColorUIResource;
-import javax.swing.text.html.HTML;
-import javax.swing.text.html.HTMLWriter;
-
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 
 public class HtmlDemo extends JPanel
@@ -159,10 +171,11 @@ public class HtmlDemo extends JPanel
               "  </li>\n" +
               "  <li>\n" +
               "<p>\n" +
-              "Say goodbye ugly product descriptions.\n" +
+              "Say goodbye to ugly product descriptions.\n" +
               "</p>\n</li>\n</ul>";
 
       htmlTextArea.setText(newText);
+      theLabel.setText(htmlTextArea.getText());
 
 
 

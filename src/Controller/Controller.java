@@ -1,6 +1,6 @@
 package Controller;
 
-import java.awt.*;
+import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -29,6 +29,8 @@ public class Controller implements IController {
 
   @Override
   public void actionPerformed(ActionEvent e) {
+
+    HtmlDemo html = new HtmlDemo();
 
     if (e.getActionCommand().equals("createButton")) {
 
@@ -68,6 +70,10 @@ public class Controller implements IController {
     } else if (e.getActionCommand().equals("createCardButton")) {
 
       //TODO: need to handle empty fields/images, not now for sake of testing efficiency
+
+
+      homeView.getCreatePanel().getCard().setDescription(html.giveHTML());
+      System.out.println(html.giveHTML());
 
       String cardName = homeView.getCreatePanel().getCard().getName();
       String cardTitle = homeView.getCreatePanel().getCard().getTitle();
@@ -182,9 +188,9 @@ public class Controller implements IController {
     } else if (e.getActionCommand().equals("HTMLLab")) {
 
 
-      HtmlDemo html = new HtmlDemo();
-      homeView.getCreatePanel().getCard().setDescription(html.giveHTML());
-      System.out.println(html.giveHTML());
+//      HtmlDemo html = new HtmlDemo();
+//      homeView.getCreatePanel().getCard().setDescription(html.giveHTML());
+//      System.out.println(html.giveHTML());
       html.createAndShowGUI();
       //this.homeView.getCreatePanel().add(html);
 
