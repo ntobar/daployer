@@ -15,6 +15,7 @@ import javax.swing.border.Border;
 
 import Cards.ICard;
 
+//TODO: LIKE IN FINDER, option to switch between card views, stacks vs side by side etc.
 
 public class MyCardsPanel extends JPanel {
   private Color MAIA_BG_COLOR;
@@ -30,6 +31,7 @@ public class MyCardsPanel extends JPanel {
 
   public MyCardsPanel() {
     super();
+
 
     this.cards = new ArrayList<>();
 

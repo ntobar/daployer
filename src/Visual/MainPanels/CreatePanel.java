@@ -1,17 +1,10 @@
 package Visual.MainPanels;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -66,9 +59,19 @@ public class CreatePanel extends JPanel {
             "Card Factory", 0, 0, Font.getFont(Font.DIALOG),
             MAIA_LOGO_COLOR));
 
-    //this.setLayout(new BorderLayout());
 
 
+
+    JLabel daployerLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
+            + "font-family: terminal, monaco; font-size: 36pt;\">&lt; daployer /&gt;</span></p>");
+
+    Border daployerBorder = BorderFactory.createMatteBorder(3,3,3,3,
+            MAIA_LOGO_COLOR);
+    daployerLabel.setBorder(daployerBorder);
+
+    this.add(daployerLabel);
+
+    //this.add(Box.createRigidArea(new Dimension(this.getWidth(),100)));
     //---------------------------------------------------------------------------------------------
     //------------------------------------JLabels Setup -------------------------------------------
     //---------------------------------------------------------------------------------------------
