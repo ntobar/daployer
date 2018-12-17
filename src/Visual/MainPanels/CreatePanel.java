@@ -65,8 +65,15 @@ public class CreatePanel extends JPanel {
             MAIA_LOGO_COLOR));
 
 
-    //this.setLayout(new GridBagLayout());
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------- Layout Setup ---------------------------------------------
+    //---------------------------------------------------------------------------------------------
 
+    GridBagConstraints g = new GridBagConstraints();
+    this.setLayout(new GridBagLayout());
+
+
+    //Daployer Logo
 
     JLabel daployerLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
             + "font-family: terminal, monaco; font-size: 36pt;\">>_ daployer </span></p>");
@@ -75,7 +82,15 @@ public class CreatePanel extends JPanel {
             MAIA_LOGO_COLOR);
     daployerLabel.setBorder(daployerBorder);
 
-    this.add(daployerLabel);
+
+
+    g.gridx = 0;
+    g.gridy = 0;
+    //g.ipadx = 5;
+   // g.fill = GridBagConstraints.HORIZONTAL;
+    //g.gridwidth = 3;
+
+    this.add(daployerLabel, g);
 
     //this.add(Box.createRigidArea(new Dimension(this.getWidth(),100)));
     //---------------------------------------------------------------------------------------------
@@ -144,14 +159,28 @@ public class CreatePanel extends JPanel {
 
 
     //---------------------------------------------------------------------------------------------
-    //------------------------------------Order Setup ---------------------------------------------
+    //---------------------------- Adding Name & Title Label/Fields -------------------------------
     //---------------------------------------------------------------------------------------------
 
-    this.add(nameLabel);
-    this.add(nameField);
+    g.gridx = 0;
+    g.gridy = 1;
+    this.add(nameLabel,g);
+    g.gridx = 1;
+    g.gridy = 1;
+    this.add(nameField,g);
 
-    this.add(titleLabel);
-    this.add(titleField);
+    g.gridx = 2;
+    g.gridy = 1;
+    this.add(titleLabel,g);
+    g.gridx = 3;
+    g.gridy = 1;
+    this.add(titleField,g);
+
+    //g.insets = new Insets(10, 10, 10, 10);
+
+    //---------------------------------------------------------------------------------------------
+    //---------------------------------- BG/LOGO/HTML Choosers ------------------------------------
+    //---------------------------------------------------------------------------------------------
 
     backgroundImgChooser = new JFileChooser();
     backgroundImgChooser.setAcceptAllFileFilterUsed(false);
@@ -173,29 +202,39 @@ public class CreatePanel extends JPanel {
 
 
     //---------------------------------------------------------------------------------------------
-    //------------------------------------Button Setup --------------------------------------------
+    //---------------------------------- Button Setup & Adding ------------------------------------
     //---------------------------------------------------------------------------------------------
 
     chooseBackGroundImg = new JButton("Choose Background Image");
     chooseBackGroundImg.setActionCommand("chooseBGIMG");
-    this.add(chooseBackGroundImg);
+    g.gridx = 0;
+    g.gridy = 2;
+    this.add(chooseBackGroundImg,g);
 
     chooseLogoImg = new JButton("Choose Logo Image");
     chooseLogoImg.setActionCommand("chooseLogoImage");
-    this.add(chooseLogoImg);
+    g.gridx = 1;
+    g.gridy = 2;
+    this.add(chooseLogoImg,g);
 
     chooseHTML = new JButton("Choose HTML Files");
     chooseHTML.setActionCommand("chooseHTMLImage");
-    this.add(chooseHTML);
+    g.gridx = 2;
+    g.gridy = 2;
+    this.add(chooseHTML,g);
 
     createHTML = new JButton("HTML Lab");
     createHTML.setActionCommand("HTMLLab");
-    this.add(createHTML);
+    g.gridx = 3;
+    g.gridy = 2;
+    this.add(createHTML,g);
 
 
     this.createCard = new JButton("Create Card");
     createCard.setActionCommand("createCardButton");
-    this.add(createCard);
+    g.gridx = 2;
+    g.gridy = 3;
+    this.add(createCard,g);
 
 
   }
