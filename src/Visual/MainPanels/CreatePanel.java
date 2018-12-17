@@ -1,11 +1,17 @@
 package Visual.MainPanels;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import javax.imageio.ImageIO;
-import javax.swing.*;
-import javax.swing.border.BevelBorder;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.Border;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -100,6 +106,7 @@ public class CreatePanel extends JPanel {
       public void focusGained(FocusEvent e) {
 
         nameField.setBackground(Color.gray);
+
 
 
 
