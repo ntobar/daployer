@@ -93,6 +93,9 @@ public class CreatePanel extends JPanel {
       @Override
       public void focusGained(FocusEvent e) {
 
+        nameField.setBackground(Color.gray);
+
+
       }
 
       @Override
@@ -101,6 +104,7 @@ public class CreatePanel extends JPanel {
         String nameText = ((JTextField) e.getSource()).getText();
 
         setName(nameText);
+        nameField.setBackground(Color.WHITE);
       }
     });
 
@@ -111,6 +115,7 @@ public class CreatePanel extends JPanel {
     titleField.addFocusListener(new FocusListener() {
       @Override
       public void focusGained(FocusEvent e) {
+        titleField.setBackground(Color.gray);
 
       }
 
@@ -120,6 +125,7 @@ public class CreatePanel extends JPanel {
         String nameText = ((JTextField) e.getSource()).getText();
 
         setTitle(nameText);
+        titleField.setBackground(Color.WHITE);
 
       }
     });
