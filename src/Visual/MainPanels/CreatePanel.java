@@ -5,6 +5,7 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -88,6 +89,10 @@ public class CreatePanel extends JPanel {
     nameField = new JTextField();
     nameField.setColumns(10);
     nameField.setActionCommand("nameField");
+
+    nameField.setBorder(BorderFactory.createLineBorder(MAIA_LOGO_COLOR));
+
+
     //String nameText = "";
     nameField.addFocusListener(new FocusListener() {
       @Override
@@ -95,6 +100,7 @@ public class CreatePanel extends JPanel {
 
         nameField.setBackground(Color.gray);
 
+        nameField.setText("");
 
       }
 

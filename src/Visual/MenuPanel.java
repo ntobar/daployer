@@ -70,7 +70,7 @@ public class MenuPanel extends JPanel {
     createPanel.setBackground(MAIA_BG_COLOR);
 
 
-    createButton = new JButton("   Create   ");
+    createButton = new JButton("<  Create />");
     createButton.setPreferredSize(new Dimension(190, 50));
     createButton.setOpaque(true);
     createButton.setBackground(MAIA_BG_COLOR);
@@ -133,6 +133,18 @@ public class MenuPanel extends JPanel {
     explorePanel.add(exploreButton);
     this.add(explorePanel);
     //this.add(exploreButton);
+
+
+  }
+
+  public void setDefault() {
+
+    createButton.setText("   Create   ");
+    myCardsButton.setText("   My Cards   ");
+    exploreButton.setText("   Explore   ");
+
+
+
 
 
   }

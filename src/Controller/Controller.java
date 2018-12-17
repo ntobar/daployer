@@ -1,6 +1,6 @@
 package Controller;
 
-import java.awt.CardLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import javax.swing.plaf.ColorUIResource;
 
 import Visual.HomeView;
@@ -30,11 +31,17 @@ public class Controller implements IController {
   @Override
   public void actionPerformed(ActionEvent e) {
 
+    Color MAIA_BG_COLOR = new Color(40, 45, 51);
+    Color MAIA_LOGO_COLOR = new Color(144, 195, 240);
+
     HtmlDemo html = new HtmlDemo();
     html.setCard(homeView.getCreatePanel().getCard());
 
     if (e.getActionCommand().equals("createButton")) {
 
+      homeView.getMenuPanel().setDefault();
+
+      homeView.getMenuPanel().getCreateButton().setText("<  Create />");
 
       CardLayout cl = (CardLayout) (homeView.getBasePanel().getLayout());
       cl.show(homeView.getBasePanel(), "createPanel");
@@ -55,6 +62,10 @@ public class Controller implements IController {
 
     } else if (e.getActionCommand().equals("myCardsButton")) {
 
+      homeView.getMenuPanel().setDefault();
+
+      homeView.getMenuPanel().getMyCardsButton().setText("<  My Cards />");
+
 
       CardLayout cl = (CardLayout) (homeView.getBasePanel().getLayout());
 
@@ -62,6 +73,10 @@ public class Controller implements IController {
 
 
     } else if (e.getActionCommand().equals("exploreButton")) {
+
+      homeView.getMenuPanel().setDefault();
+
+      homeView.getMenuPanel().getExploreButton().setText("<  Explore />");
 
 
       CardLayout cl = (CardLayout) (homeView.getBasePanel().getLayout());
