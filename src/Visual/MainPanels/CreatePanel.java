@@ -46,7 +46,14 @@ public class CreatePanel extends JPanel {
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
 
+
+
+
     this.setPreferredSize(new Dimension(800, 1000));
+
+
+    int panelWidth = this.getPreferredSize().width/3;
+
 
     this.MAIA_BG_COLOR = new Color(40, 45, 51);
     this.MAIA_LOGO_COLOR = new Color(144, 195, 240);
@@ -145,8 +152,8 @@ public class CreatePanel extends JPanel {
    // g.gridwidth = 0;
 
     this.add(daployerLabel, g);
-    g.ipady = 0;
-    g.ipadx = 100;
+    g.ipady = 40;
+    g.ipadx = 300;
 
 
     //this.add(Box.createRigidArea(new Dimension(this.getWidth(),100)));
@@ -219,29 +226,87 @@ public class CreatePanel extends JPanel {
     //---------------------------- Adding Name & Title Label/Fields -------------------------------
     //---------------------------------------------------------------------------------------------
 
+//    g.gridx = 0;
+//    g.gridy = 1;
+
+//    g.ipady = 5;
+//    g.ipadx = 200;
+
+   // this.add(new JSeparator(), g);
+
+//    g.ipady = 50;
+//    g.ipadx = 300;
 
 
     g.gridx = 0;
     g.gridy = 1;
-    this.add(nameLabel,g);
+
+
+    JPanel namePanel = new JPanel();
+    namePanel.add(nameLabel);
+    namePanel.add(nameField);
+    namePanel.setBackground(MAIA_BG_COLOR);
+    namePanel.setBorder(BorderFactory.createMatteBorder(2,0,2,2,
+            MAIA_LOGO_COLOR));
+    namePanel.setPreferredSize(new Dimension(panelWidth,100));
+    this.add(namePanel, g);
+
+
 
     g.gridx = 1;
     g.gridy = 1;
-    this.add(nameField,g);
+
+    g.ipady = 58;
+    g.ipadx = 300;
+
+
+    JPanel emptyPanel = new JPanel();
+    emptyPanel.setBackground(MAIA_BG_COLOR);
+    emptyPanel.setBorder(BorderFactory.createMatteBorder(2,0,2,0,
+            MAIA_LOGO_COLOR));
+    emptyPanel.setPreferredSize(new Dimension(panelWidth,100));
+    this.add(emptyPanel, g);
+
+
+//    g.gridx = 0;
+//    g.gridy = 1;
+//    this.add(nameLabel,g);
+//
+//    g.gridx = 1;
+//    g.gridy = 1;
+//    this.add(nameField,g);
+
+    g.ipady = 32;
+    g.ipadx = panelWidth;
 
 
     g.gridx = 2;
     g.gridy = 1;
-    this.add(titleLabel,g);
+
+    JPanel titlePanel = new JPanel();
+    titlePanel.add(titleLabel);
+    titlePanel.add(titleField);
+    titlePanel.setBackground(MAIA_BG_COLOR);
+    titlePanel.setBorder(BorderFactory.createMatteBorder(2,2,2,2,
+            MAIA_LOGO_COLOR));
+    titlePanel.setPreferredSize(new Dimension(panelWidth,100));
+    this.add(titlePanel, g);
 
 
 
-    g.gridx = 3;
-    g.gridy = 1;
-    this.add(titleField,g);
+//    this.add(titleLabel,g);
+//
+//
+//
+//    g.gridx = 3;
+//    g.gridy = 1;
+//    this.add(titleField,g);
 
 
     this.add(new JSeparator());
+
+    g.ipady = 0;
+    g.ipadx = 100;
 
 
 
@@ -294,8 +359,8 @@ public class CreatePanel extends JPanel {
 
     createHTML = new JButton("HTML Lab");
     createHTML.setActionCommand("HTMLLab");
-    g.gridx = 3;
-    g.gridy = 2;
+    g.gridx = 1;
+    g.gridy = 3;
     this.add(createHTML,g);
 
 
