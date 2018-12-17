@@ -61,10 +61,11 @@ public class CreatePanel extends JPanel {
             MAIA_LOGO_COLOR));
 
 
+    //TODO: fix name label erasing
 
 
     JLabel daployerLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
-            + "font-family: terminal, monaco; font-size: 36pt;\">&lt; daployer /&gt;</span></p>");
+            + "font-family: terminal, monaco; font-size: 36pt;\">>_ daployer </span></p>");
 
     Border daployerBorder = BorderFactory.createMatteBorder(3,3,3,3,
             MAIA_LOGO_COLOR);
@@ -100,7 +101,7 @@ public class CreatePanel extends JPanel {
 
         nameField.setBackground(Color.gray);
 
-        nameField.setText("");
+
 
       }
 
