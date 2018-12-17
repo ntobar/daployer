@@ -4,12 +4,8 @@ import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -71,26 +67,87 @@ public class CreatePanel extends JPanel {
 
     GridBagConstraints g = new GridBagConstraints();
     this.setLayout(new GridBagLayout());
+    //g.insets = new Insets(10,10,10,10);
 
 
     //Daployer Logo
 
+    JLabel logoLeft = new JLabel("<html><p><span color=#90C3F0 style=\""
+            + "font-family: terminal, monaco; font-size: 36pt;\"> ------ </span></p>");
+
+    JLabel logoRight = new JLabel("<html><p><span color=#90C3F0 style=\""
+            + "font-family: terminal, monaco; font-size: 36pt;\"> ------ </span></p>");
+
+
+//    JLabel daployerLabel = new JLabel("<html><p><span color=#282D33 style=\""
+//            + "font-family: terminal, monaco; font-size: 36pt;\">>_  daployer </span></p>");
+
+//    JLabel daployerLabel = new JLabel("<html><p><span color=#90C379 style=\""
+//            + "font-family: terminal, monaco; font-size: 36pt;\">>_  daployer </span></p>");
+
     JLabel daployerLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
-            + "font-family: terminal, monaco; font-size: 36pt;\">>_ daployer </span></p>");
+            + "font-family: terminal, monaco; font-size: 36pt;\">>_  daployer </span></p>");
 
     Border daployerBorder = BorderFactory.createMatteBorder(3,3,3,3,
             MAIA_LOGO_COLOR);
-    daployerLabel.setBorder(daployerBorder);
+    //daployerLabel.setBorder(daployerBorder);
 
+//    daployerLabel.setOpaque(true);
+//
+//    daployerLabel.setBackground(MAIA_LOGO_COLOR);
+
+
+    daployerLabel.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED,
+            MAIA_LOGO_COLOR, MAIA_LOGO_COLOR,
+            MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
+
+
+//    daployerLabel.setBorder(BorderFactory.createBevelBorder(
+//            BevelBorder.RAISED, MAIA_LOGO_COLOR,
+//            MAIA_LOGO_COLOR,
+//            MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
 
 
     g.gridx = 0;
     g.gridy = 0;
+    g.ipady = 20;
+    g.ipadx = 200;
+    g.weightx = 0.5;
+    g.weighty = 1.0;
+    //g.ipadx = 5;
+    // g.fill = GridBagConstraints.HORIZONTAL;
+    //g.gridwidth = 2;
+
+    //this.add(logoLeft, g);
+
+    g.gridx = 2;
+    g.gridy = 0;
+    g.ipady = 20;
+    g.ipadx = 200;
+    g.weightx = 0.5;
+    g.weighty = 1.0;
+    //g.ipadx = 5;
+    // g.fill = GridBagConstraints.HORIZONTAL;
+    //g.gridwidth = 0;
+
+    //this.add(logoRight, g);
+
+
+    g.gridx = 1;
+    g.gridy = 0;
+    g.ipady = 20;
+    g.ipadx = 200;
+    g.weightx = 0.5;
+    g.weighty = 1.0;
     //g.ipadx = 5;
    // g.fill = GridBagConstraints.HORIZONTAL;
-    //g.gridwidth = 3;
+   // g.gridwidth = 0;
 
     this.add(daployerLabel, g);
+    g.ipady = 0;
+    g.ipadx = 100;
+
 
     //this.add(Box.createRigidArea(new Dimension(this.getWidth(),100)));
     //---------------------------------------------------------------------------------------------
@@ -162,19 +219,31 @@ public class CreatePanel extends JPanel {
     //---------------------------- Adding Name & Title Label/Fields -------------------------------
     //---------------------------------------------------------------------------------------------
 
+
+
     g.gridx = 0;
     g.gridy = 1;
     this.add(nameLabel,g);
+
     g.gridx = 1;
     g.gridy = 1;
     this.add(nameField,g);
 
+
     g.gridx = 2;
     g.gridy = 1;
     this.add(titleLabel,g);
+
+
+
     g.gridx = 3;
     g.gridy = 1;
     this.add(titleField,g);
+
+
+    this.add(new JSeparator());
+
+
 
     //g.insets = new Insets(10, 10, 10, 10);
 
