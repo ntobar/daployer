@@ -1,8 +1,6 @@
 package Visual.MainPanels;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import javax.imageio.ImageIO;
@@ -67,7 +65,7 @@ public class CreatePanel extends JPanel {
             MAIA_LOGO_COLOR));
 
 
-    //TODO: fix name label erasing
+    //this.setLayout(new GridBagLayout());
 
 
     JLabel daployerLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
