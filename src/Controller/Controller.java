@@ -31,6 +31,7 @@ public class Controller implements IController {
   public void actionPerformed(ActionEvent e) {
 
     HtmlDemo html = new HtmlDemo();
+    html.setCard(homeView.getCreatePanel().getCard());
 
     if (e.getActionCommand().equals("createButton")) {
 
@@ -72,13 +73,17 @@ public class Controller implements IController {
       //TODO: need to handle empty fields/images, not now for sake of testing efficiency
 
 
+
       homeView.getCreatePanel().getCard().setDescription(html.giveHTML());
       System.out.println(html.giveHTML());
+
+      //System.out.println("html: " + html);
 
       String cardName = homeView.getCreatePanel().getCard().getName();
       String cardTitle = homeView.getCreatePanel().getCard().getTitle();
       String pathName = homeView.getCreatePanel().getCard().getPathName();
-      String description = homeView.getCreatePanel().getCard().getDescription();
+      //String description = homeView.getCreatePanel().getCard().getDescription();
+      String description = html.giveHTML();
 
       String errorMsg1 = "<html> <span style='color:#90C3F0'>" +
               "Please fill in the Card Name field and Card Title field </span></html>";

@@ -8,13 +8,18 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.border.Border;
-import javax.swing.text.html.HTML;
+
 
 
 /**
- * Represents a Cards.Card
+ * Represents a Card.
  */
 public abstract class Card implements ICard {
   private Color MAIA_BG_COLOR;
@@ -35,6 +40,10 @@ public abstract class Card implements ICard {
   //TODO: have to implement new HTML template to be shown
 
   //TODO: Implement this later , HTML description, Image backgroundImage, Image logoImage
+
+  /**
+   * Constructs a {@code Card} object.
+   */
   public Card() {
     //super();
 
@@ -56,7 +65,15 @@ public abstract class Card implements ICard {
   }
 
 
-
+  /**
+   * This methods is responsible for getting a Cards components and creating a visual
+   * representation of a Card.
+   * @param name - the Name of the card to which it will be referred to
+   * @param title - The title of the Card
+   * @param pName - The Background Images Path Name
+   * @param descriptiona - the Description of the Card
+   * @return JPanel - representing the Card with its respective components
+   */
   public JPanel createCard(String name, String title, String pName, String descriptiona) {
 
 

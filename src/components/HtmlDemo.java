@@ -55,17 +55,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
+import Cards.ICard;
+import Cards.dAppCard;
+
 
 public class HtmlDemo extends JPanel
         implements ActionListener {
+
+  ICard card;
   JLabel theLabel;
   JTextArea htmlTextArea;
 
 
 
-
-
   public HtmlDemo() {
+
+
 
     setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
 
@@ -197,6 +202,7 @@ public class HtmlDemo extends JPanel
 
       //card.setDescription(htmlTextArea.getText());
 
+      //this.card.setDescription(htmlTextArea.getText());
 
 
     }
@@ -240,6 +246,11 @@ public class HtmlDemo extends JPanel
 
   public String giveHTML() {
     return theLabel.getText();
+  }
+
+
+  public void setCard(ICard card) {
+    this.card = card;
   }
 
 
