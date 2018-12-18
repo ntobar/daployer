@@ -336,7 +336,7 @@ public class CreatePanel extends JPanel {
             "Image files", ImageIO.getReaderFileSuffixes());
     backgroundImgChooser.addChoosableFileFilter(imageFilter);
     backgroundImgChooser.setDialogTitle("Upload Background Image");
-    
+
 
     logoImgChooser = new JFileChooser();
     logoImgChooser.setDialogTitle("Upload Logo Image");
@@ -356,6 +356,14 @@ public class CreatePanel extends JPanel {
 
     chooseBackGroundImg = new JButton("Choose Background Image");
     chooseBackGroundImg.setActionCommand("chooseBGIMG");
+    chooseBackGroundImg.setOpaque(true);
+    chooseBackGroundImg.setBackground(MAIA_LOGO_COLOR);
+    chooseBackGroundImg.setForeground(MAIA_BG_COLOR);
+    chooseBackGroundImg.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, MAIA_LOGO_COLOR,
+            MAIA_BG_COLOR,
+            MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+
     g.gridx = 0;
     g.gridy = 2;
     this.add(chooseBackGroundImg,g);
