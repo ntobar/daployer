@@ -54,11 +54,11 @@ public class CreatePanel extends JPanel implements MouseListener {
     super();
 
     this.card = new dAppCard();
-    //---------------------------------------------------------------------------------------------
-    //---------------------------------------------------------------------------------------------
-    //---------------------------------------------------------------------------------------------
 
 
+    //---------------------------------------------------------------------------------------------
+    //------------------------------------ Panel Preferences --------------------------------------
+    //---------------------------------------------------------------------------------------------
 
 
     this.setPreferredSize(new Dimension(800, 1000));
@@ -91,41 +91,16 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     //Daployer Logo
 
-    JLabel logoLeft = new JLabel("<html><p><span color=#90C3F0 style=\""
-            + "font-family: terminal, monaco; font-size: 36pt;\"> ------ </span></p>");
-
-    JLabel logoRight = new JLabel("<html><p><span color=#90C3F0 style=\""
-            + "font-family: terminal, monaco; font-size: 36pt;\"> ------ </span></p>");
-
-
-//    JLabel daployerLabel = new JLabel("<html><p><span color=#282D33 style=\""
-//            + "font-family: terminal, monaco; font-size: 36pt;\">>_  daployer </span></p>");
-
-//    JLabel daployerLabel = new JLabel("<html><p><span color=#90C379 style=\""
-//            + "font-family: terminal, monaco; font-size: 36pt;\">>_  daployer </span></p>");
-
     JLabel daployerLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
             + "font-family: terminal, monaco; font-size: 36pt;\">>_  daployer </span></p>");
 
-    Border daployerBorder = BorderFactory.createMatteBorder(3,3,3,3,
-            MAIA_LOGO_COLOR);
-    //daployerLabel.setBorder(daployerBorder);
 
-//    daployerLabel.setOpaque(true);
-//
-//    daployerLabel.setBackground(MAIA_LOGO_COLOR);
 
 
     daployerLabel.setBorder(BorderFactory.createBevelBorder(
             BevelBorder.RAISED,
             MAIA_LOGO_COLOR, MAIA_LOGO_COLOR,
             MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
-
-
-//    daployerLabel.setBorder(BorderFactory.createBevelBorder(
-//            BevelBorder.RAISED, MAIA_LOGO_COLOR,
-//            MAIA_LOGO_COLOR,
-//            MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
 
 
 
@@ -510,6 +485,7 @@ public class CreatePanel extends JPanel implements MouseListener {
   }
 
   public void whenPressedFeature(JButton b) {
+
 
     b.setOpaque(true);
     b.setBackground(MAIA_BG_COLOR);
