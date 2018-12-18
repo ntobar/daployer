@@ -63,6 +63,22 @@ public class Controller implements IController {
       //homeView.add(homeView.getMyCardsPanel(), BorderLayout.EAST);
 
 
+    } else if (e.getActionCommand().equals("previewButton")) {
+
+      String cardName = homeView.getCreatePanel().getPreviewCard().getName();
+      String cardTitle = homeView.getCreatePanel().getPreviewCard().getTitle();
+      String pathName = homeView.getCreatePanel().getPreviewCard().getPathName();
+      //String description = homeView.getCreatePanel().getCard().getDescription();
+      String description = html.giveHTML();
+
+      JPanel newCard = homeView.getCreatePanel().getCard().createCard(cardName, cardTitle,
+              pathName, description);
+
+      homeView.getCreatePanel().updateCard();
+
+
+
+
     } else if (e.getActionCommand().equals("myCardsButton")) {
 
       homeView.getMenuPanel().setDefault();

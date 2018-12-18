@@ -274,15 +274,37 @@ public class CreatePanel extends JPanel implements MouseListener {
     g.gridx = 1;
     g.gridy = 1;
 
-    g.ipady = 58;
-    g.ipadx = 300;
+//    g.ipady = 58;
+//    g.ipadx = 300;
 
+
+    g.ipady = 40;
+    g.ipadx = panelWidth;
 
     JPanel emptyPanel = new JPanel();
     emptyPanel.setBackground(MAIA_BG_COLOR);
     emptyPanel.setBorder(BorderFactory.createMatteBorder(2,0,2,0,
             MAIA_LOGO_COLOR));
     emptyPanel.setPreferredSize(new Dimension(panelWidth,100));
+
+    this.createCard = new JButton("Create Card");
+    createCard.setOpaque(true);
+    createCard.setBackground(MAIA_LOGO_COLOR);
+    createCard.setForeground(MAIA_BG_COLOR);
+    createCard.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+    createCard.setActionCommand("createCardButton");
+    createCard.setPreferredSize(new Dimension(100,35));
+
+    createCard.addMouseListener(this);
+
+//    g.gridx = 1;
+//    g.gridy = 4;
+//    g.gridx = 1;
+//    g.gridy = 1;
+    //this.add(createCard,g);
+    emptyPanel.add(createCard);
+
     this.add(emptyPanel, g);
 
 
@@ -398,6 +420,10 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     previewButton.addMouseListener(this);
 
+    g.gridx = 1;
+    g.gridy = 4;
+    this.add(previewButton, g);
+
 
     chooseBackGroundImg = new JButton("Choose Background Image");
     chooseBackGroundImg.setActionCommand("chooseBGIMG");
@@ -456,19 +482,21 @@ public class CreatePanel extends JPanel implements MouseListener {
     this.add(createHTML,g);
 
 
-    this.createCard = new JButton("Create Card");
-    createCard.setOpaque(true);
-    createCard.setBackground(MAIA_LOGO_COLOR);
-    createCard.setForeground(MAIA_BG_COLOR);
-    createCard.setBorder(BorderFactory.createBevelBorder(
-            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
-    createCard.setActionCommand("createCardButton");
-
-    createCard.addMouseListener(this);
-
-    g.gridx = 1;
-    g.gridy = 4;
-    this.add(createCard,g);
+//    this.createCard = new JButton("Create Card");
+//    createCard.setOpaque(true);
+//    createCard.setBackground(MAIA_LOGO_COLOR);
+//    createCard.setForeground(MAIA_BG_COLOR);
+//    createCard.setBorder(BorderFactory.createBevelBorder(
+//            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+//    createCard.setActionCommand("createCardButton");
+//
+//    createCard.addMouseListener(this);
+//
+////    g.gridx = 1;
+////    g.gridy = 4;
+//    g.gridx = 1;
+//    g.gridy = 1;
+//    this.add(createCard,g);
 
 
   }
@@ -540,54 +568,61 @@ public class CreatePanel extends JPanel implements MouseListener {
     return previewButton;
   }
 
+  public ICard getPreviewCard() {
+    return previewCard;
+  }
+
+  public void updateCard() {
+
+    String type;
+    String newComponent;
 
 
-  public void updateCard(String type, String newComponent) {
 
-
-
-    switch(type) {
-
-      case "name":
-
-        previewCard.setName(newComponent);
-
-        break;
-
-      case "title":
-
-        previewCard.setTitle(newComponent);
-
-        break;
-
-      case "pathName":
-
-        previewCard.setPathName(newComponent);
-
-        break;
-
-      case "description":
-
-        previewCard.setDescription(newComponent);
-
-        break;
-
-
-      default:
-        break;
-    }
+//    switch(type) {
+//
+//      case "name":
+//
+//        previewCard.setName(newComponent);
+//
+//        break;
+//
+//      case "title":
+//
+//        previewCard.setTitle(newComponent);
+//
+//        break;
+//
+//      case "pathName":
+//
+//        previewCard.setPathName(newComponent);
+//
+//        break;
+//
+//      case "description":
+//
+//        previewCard.setDescription(newComponent);
+//
+//        break;
+//
+//
+//      default:
+//        break;
+//    }
 
 
     JPanel newP = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
             previewCard.getPathName(), previewCard.getDescription());
 
-    newP.setPreferredSize(new Dimension(400,266));
+    newP.setPreferredSize(new Dimension(272,500));
 //    previewPanel = newP;
 
 //    System.out.println("name: " + previewCard.getName());
 
-    previewPanel.setVisible(true);
+    //previewPanel.setVisible(true);
+    newP.setVisible(true);
     previewPanel.add(newP);
+    previewPanel.setVisible(true);
 
 
 

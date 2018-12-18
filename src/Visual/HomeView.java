@@ -130,6 +130,8 @@ public class HomeView extends JFrame {
     this.getCreatePanel().getChooseHTML().addActionListener(listen);
     this.getCreatePanel().getCreateHTML().addActionListener(listen);
 
+    this.getCreatePanel().getPreviewButton().addActionListener(listen);
+
 
   }
 
