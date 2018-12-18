@@ -41,10 +41,13 @@ public class CreatePanel extends JPanel implements MouseListener {
   private JButton chooseLogoImg;
   private JButton chooseHTML;
   private JButton createHTML;
+  private JButton previewButton;
   private JFileChooser backgroundImgChooser;
   private JFileChooser logoImgChooser;
   private JFileChooser htmlChooser;
   private JPanel previewPanel;
+
+
 
 
   /**
@@ -202,7 +205,7 @@ public class CreatePanel extends JPanel implements MouseListener {
         setName(nameText);
         nameField.setBackground(Color.WHITE);
 
-        updateCard("name", nameText);
+        //updateCard("name", nameText);
 
 
 
@@ -384,6 +387,18 @@ public class CreatePanel extends JPanel implements MouseListener {
     g.ipadx = 40;
     // end reset
 
+
+    previewButton = new JButton("Card Preview");
+    previewButton.setActionCommand("previewButton");
+    previewButton.setOpaque(true);
+    previewButton.setBackground(MAIA_LOGO_COLOR);
+    previewButton.setForeground(MAIA_BG_COLOR);
+    previewButton.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+
+    previewButton.addMouseListener(this);
+
+
     chooseBackGroundImg = new JButton("Choose Background Image");
     chooseBackGroundImg.setActionCommand("chooseBGIMG");
     chooseBackGroundImg.setOpaque(true);
@@ -519,6 +534,10 @@ public class CreatePanel extends JPanel implements MouseListener {
 
   public void setPreviewPanel(JPanel previewPanel) {
     this.previewPanel = previewPanel;
+  }
+
+  public JButton getPreviewButton() {
+    return previewButton;
   }
 
 
