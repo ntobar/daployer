@@ -48,13 +48,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="16678" />
+          <entry key="java" value="16757" />
           <entry key="md" value="134" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16678" />
+          <entry key="JAVA" value="16757" />
           <entry key="Markdown" value="134" />
         </counts>
       </usages-collector>
@@ -120,20 +120,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="513" column="4" selection-start-line="513" selection-start-column="4" selection-end-line="513" selection-end-column="4" />
+            <state relative-caret-position="1445">
+              <caret line="438" column="2" selection-start-line="438" selection-start-column="2" selection-end-line="438" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5798#5799#0" expanded="true" />
                 <element signature="e#5819#5820#0" expanded="true" />
                 <element signature="e#5855#5856#0" expanded="true" />
                 <element signature="e#5882#5883#0" expanded="true" />
-                <element signature="e#5916#5917#0" expanded="true" />
-                <element signature="e#5942#5943#0" expanded="true" />
-                <element signature="e#5977#5978#0" expanded="true" />
-                <element signature="e#6004#6005#0" expanded="true" />
-                <element signature="e#6045#6046#0" expanded="true" />
-                <element signature="e#6078#6079#0" expanded="true" />
                 <element signature="e#6123#6124#0" expanded="true" />
                 <element signature="e#6159#6160#0" expanded="true" />
                 <element signature="e#6198#6199#0" expanded="true" />
@@ -144,8 +138,6 @@
                 <element signature="e#6392#6393#0" expanded="true" />
                 <element signature="e#6430#6431#0" expanded="true" />
                 <element signature="e#6456#6457#0" expanded="true" />
-                <element signature="e#6495#6496#0" expanded="true" />
-                <element signature="e#6522#6523#0" expanded="true" />
                 <element signature="e#6558#6559#0" expanded="true" />
                 <element signature="e#6585#6586#0" expanded="true" />
                 <element signature="e#6627#6628#0" expanded="true" />
@@ -369,7 +361,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545096873147" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545096951509" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -410,12 +402,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544581962428</updated>
       <workItem from="1544581965668" duration="35423000" />
-      <workItem from="1544746353709" duration="43445000" />
+      <workItem from="1544746353709" duration="43713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78868000" />
+    <option name="totallyTimeSpent" value="79136000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -676,20 +668,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="513" column="4" selection-start-line="513" selection-start-column="4" selection-end-line="513" selection-end-column="4" />
+        <state relative-caret-position="1445">
+          <caret line="438" column="2" selection-start-line="438" selection-start-column="2" selection-end-line="438" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5798#5799#0" expanded="true" />
             <element signature="e#5819#5820#0" expanded="true" />
             <element signature="e#5855#5856#0" expanded="true" />
             <element signature="e#5882#5883#0" expanded="true" />
-            <element signature="e#5916#5917#0" expanded="true" />
-            <element signature="e#5942#5943#0" expanded="true" />
-            <element signature="e#5977#5978#0" expanded="true" />
-            <element signature="e#6004#6005#0" expanded="true" />
-            <element signature="e#6045#6046#0" expanded="true" />
-            <element signature="e#6078#6079#0" expanded="true" />
             <element signature="e#6123#6124#0" expanded="true" />
             <element signature="e#6159#6160#0" expanded="true" />
             <element signature="e#6198#6199#0" expanded="true" />
@@ -700,8 +686,6 @@
             <element signature="e#6392#6393#0" expanded="true" />
             <element signature="e#6430#6431#0" expanded="true" />
             <element signature="e#6456#6457#0" expanded="true" />
-            <element signature="e#6495#6496#0" expanded="true" />
-            <element signature="e#6522#6523#0" expanded="true" />
             <element signature="e#6558#6559#0" expanded="true" />
             <element signature="e#6585#6586#0" expanded="true" />
             <element signature="e#6627#6628#0" expanded="true" />

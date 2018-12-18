@@ -436,18 +436,7 @@ public class CreatePanel extends JPanel implements MouseListener {
   public JButton getCreateCard() {
     return createCard;
   }
-
-  public JLabel getNameLabel() {
-    return nameLabel;
-  }
-
-  public JLabel getTitleLabel() {
-    return titleLabel;
-  }
-
-  public JLabel getDescriptionLabel() {
-    return descriptionLabel;
-  }
+  
 
   public JButton getChooseBackGroundImg() {
     return chooseBackGroundImg;
@@ -469,9 +458,6 @@ public class CreatePanel extends JPanel implements MouseListener {
     return nameField;
   }
 
-  public JTextField getTitleField() {
-    return titleField;
-  }
 
   public JButton getChooseHTML() {
     return chooseHTML;
