@@ -116,29 +116,6 @@ public class CreatePanel extends JPanel {
 //            MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
 
 
-    g.gridx = 0;
-    g.gridy = 0;
-    g.ipady = 20;
-    g.ipadx = 200;
-    g.weightx = 0.5;
-    g.weighty = 1.0;
-    //g.ipadx = 5;
-    // g.fill = GridBagConstraints.HORIZONTAL;
-    //g.gridwidth = 2;
-
-    //this.add(logoLeft, g);
-
-    g.gridx = 2;
-    g.gridy = 0;
-    g.ipady = 20;
-    g.ipadx = 200;
-    g.weightx = 0.5;
-    g.weighty = 1.0;
-    //g.ipadx = 5;
-    // g.fill = GridBagConstraints.HORIZONTAL;
-    //g.gridwidth = 0;
-
-    //this.add(logoRight, g);
 
 
     g.gridx = 1;
@@ -152,6 +129,43 @@ public class CreatePanel extends JPanel {
    // g.gridwidth = 0;
 
     this.add(daployerLabel, g);
+
+    JLabel emptyLeft = new JLabel();
+    emptyLeft.setOpaque(true);
+    emptyLeft.setBackground(MAIA_BG_COLOR);
+    emptyLeft.setBorder(BorderFactory.createMatteBorder(10,0,10,0, MAIA_LOGO_COLOR));
+//    emptyLeft.setBorder(BorderFactory.createBevelBorder(
+//            BevelBorder.RAISED,
+//            MAIA_LOGO_COLOR, MAIA_LOGO_COLOR,
+//            MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
+
+
+    JLabel emptyRight = new JLabel();
+    emptyRight.setOpaque(true);
+    //emptyRight.setBackground(MAIA_LOGO_COLOR);
+    emptyRight.setBackground(MAIA_BG_COLOR);
+    emptyRight.setBorder(BorderFactory.createMatteBorder(10,0,10,0, MAIA_LOGO_COLOR));
+
+//    emptyRight.setBorder(BorderFactory.createBevelBorder(
+//            BevelBorder.RAISED,
+//            MAIA_LOGO_COLOR, MAIA_LOGO_COLOR,
+//            MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
+
+    g.gridx = 0;
+    g.gridy = 0;
+    g.ipady = 20;
+    g.ipadx = 300;
+
+    this.add(emptyLeft,g);
+
+    g.gridx = 2;
+    g.gridy = 0;
+    g.ipady = 20;
+    g.ipadx = 310;
+
+    this.add(emptyRight,g);
+
+
     g.ipady = 40;
     g.ipadx = 300;
 
@@ -246,7 +260,7 @@ public class CreatePanel extends JPanel {
     namePanel.add(nameLabel);
     namePanel.add(nameField);
     namePanel.setBackground(MAIA_BG_COLOR);
-    namePanel.setBorder(BorderFactory.createMatteBorder(2,0,2,2,
+    namePanel.setBorder(BorderFactory.createMatteBorder(5,0,5,0,
             MAIA_LOGO_COLOR));
     namePanel.setPreferredSize(new Dimension(panelWidth,100));
     this.add(namePanel, g);
@@ -287,7 +301,7 @@ public class CreatePanel extends JPanel {
     titlePanel.add(titleLabel);
     titlePanel.add(titleField);
     titlePanel.setBackground(MAIA_BG_COLOR);
-    titlePanel.setBorder(BorderFactory.createMatteBorder(2,2,2,2,
+    titlePanel.setBorder(BorderFactory.createMatteBorder(5,0,5,0,
             MAIA_LOGO_COLOR));
     titlePanel.setPreferredSize(new Dimension(panelWidth,100));
     this.add(titlePanel, g);
@@ -303,7 +317,7 @@ public class CreatePanel extends JPanel {
 //    this.add(titleField,g);
 
 
-    this.add(new JSeparator());
+    //this.add(new JSeparator());
 
     g.ipady = 0;
     g.ipadx = 100;
@@ -322,6 +336,7 @@ public class CreatePanel extends JPanel {
             "Image files", ImageIO.getReaderFileSuffixes());
     backgroundImgChooser.addChoosableFileFilter(imageFilter);
     backgroundImgChooser.setDialogTitle("Upload Background Image");
+    
 
     logoImgChooser = new JFileChooser();
     logoImgChooser.setDialogTitle("Upload Logo Image");
