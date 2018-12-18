@@ -483,24 +483,69 @@ public class CreatePanel extends JPanel implements MouseListener {
     return createHTML;
   }
 
+  public void whenPressedFeature(JButton b) {
+
+    b.setOpaque(true);
+    b.setBackground(MAIA_BG_COLOR);
+    b.setForeground(MAIA_LOGO_COLOR);
+    b.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.LOWERED, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR));
+
+
+  }
+
+  public void whenReleasedFeature(JButton b) {
+
+    b.setOpaque(true);
+    b.setBackground(MAIA_LOGO_COLOR);
+    b.setForeground(MAIA_BG_COLOR);
+    b.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+
+  }
+
+  public void whenEnteredFeature(JButton b) {
+
+    b.setOpaque(true);
+    b.setBackground(MAIA_LOGO_COLOR);
+    b.setForeground(MAIA_BG_COLOR);
+    b.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+
+  }
+
 
   @Override
   public void mouseClicked(MouseEvent e) {
-    
+
+
+
   }
 
   @Override
   public void mousePressed(MouseEvent e) {
+
+    JButton source =((JButton)e.getSource());
+
+    whenPressedFeature(source);
 
   }
 
   @Override
   public void mouseReleased(MouseEvent e) {
 
+    JButton source =((JButton)e.getSource());
+
+    whenReleasedFeature(source);
+
   }
 
   @Override
   public void mouseEntered(MouseEvent e) {
+
+    JButton source =((JButton)e.getSource());
+
+    whenEnteredFeature(source);
 
   }
 
