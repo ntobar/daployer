@@ -202,6 +202,8 @@ public class CreatePanel extends JPanel implements MouseListener {
         setName(nameText);
         nameField.setBackground(Color.WHITE);
 
+        updateCard("name", nameText);
+
 
 
 
@@ -523,6 +525,8 @@ public class CreatePanel extends JPanel implements MouseListener {
 
   public void updateCard(String type, String newComponent) {
 
+
+
     switch(type) {
 
       case "name":
@@ -559,7 +563,14 @@ public class CreatePanel extends JPanel implements MouseListener {
             previewCard.getPathName(), previewCard.getDescription());
 
     newP.setPreferredSize(new Dimension(400,266));
-    previewPanel = newP;
+    //previewPanel = newP;
+
+    System.out.println("name: " + previewCard.getName());
+
+    previewPanel.setVisible(true);
+    previewPanel.add(newP);
+
+
 
 
 
