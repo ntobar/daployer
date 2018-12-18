@@ -378,6 +378,9 @@ public class CreatePanel extends JPanel implements MouseListener {
     chooseLogoImg.setForeground(MAIA_BG_COLOR);
     chooseLogoImg.setBorder(BorderFactory.createBevelBorder(
             BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+
+    chooseLogoImg.addMouseListener(this);
+
     g.gridx = 1;
     g.gridy = 2;
     this.add(chooseLogoImg,g);
@@ -389,6 +392,9 @@ public class CreatePanel extends JPanel implements MouseListener {
     chooseHTML.setForeground(MAIA_BG_COLOR);
     chooseHTML.setBorder(BorderFactory.createBevelBorder(
             BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+
+    chooseHTML.addMouseListener(this);
+
     g.gridx = 2;
     g.gridy = 2;
     this.add(chooseHTML,g);
@@ -400,13 +406,24 @@ public class CreatePanel extends JPanel implements MouseListener {
     createHTML.setForeground(MAIA_BG_COLOR);
     createHTML.setBorder(BorderFactory.createBevelBorder(
             BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+
+    createHTML.addMouseListener(this);
+
     g.gridx = 1;
     g.gridy = 3;
     this.add(createHTML,g);
 
 
     this.createCard = new JButton("Create Card");
+    createCard.setOpaque(true);
+    createCard.setBackground(MAIA_LOGO_COLOR);
+    createCard.setForeground(MAIA_BG_COLOR);
+    createCard.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
     createCard.setActionCommand("createCardButton");
+
+    createCard.addMouseListener(this);
+
     g.gridx = 2;
     g.gridy = 3;
     this.add(createCard,g);
@@ -489,7 +506,7 @@ public class CreatePanel extends JPanel implements MouseListener {
     b.setBackground(MAIA_BG_COLOR);
     b.setForeground(MAIA_LOGO_COLOR);
     b.setBorder(BorderFactory.createBevelBorder(
-            BevelBorder.LOWERED, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR));
+            BevelBorder.LOWERED, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
 
 
   }
@@ -506,8 +523,10 @@ public class CreatePanel extends JPanel implements MouseListener {
 
   public void whenEnteredFeature(JButton b) {
 
+    Color color = new Color(144, 195, 220);
+
     b.setOpaque(true);
-    b.setBackground(MAIA_LOGO_COLOR);
+    b.setBackground(color);
     b.setForeground(MAIA_BG_COLOR);
     b.setBorder(BorderFactory.createBevelBorder(
             BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
@@ -551,6 +570,10 @@ public class CreatePanel extends JPanel implements MouseListener {
 
   @Override
   public void mouseExited(MouseEvent e) {
+
+    JButton source = ((JButton)e.getSource());
+
+    whenReleasedFeature(source);
 
   }
 }
