@@ -609,6 +609,14 @@ public class CreatePanel extends JPanel implements MouseListener {
 //      default:
 //        break;
 //    }
+    previewPanel.setVisible(false);
+
+    GridBagConstraints g = new GridBagConstraints();
+    g.gridheight = 2;
+    g.gridx = 1;
+    g.gridy = 2;
+    g.ipady = 400;
+    g.ipadx = 266;
 
 
     JPanel newP = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
@@ -620,10 +628,17 @@ public class CreatePanel extends JPanel implements MouseListener {
 //    System.out.println("name: " + previewCard.getName());
 
     //previewPanel.setVisible(true);
-    newP.setVisible(true);
-    previewPanel.add(newP);
+
+    previewPanel = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
+            previewCard.getPathName(), previewCard.getDescription());
+
+    //newP.setVisible(true);
+    //previewPanel.add(newP);
     previewPanel.setVisible(true);
 
+
+
+    this.add(previewPanel, g);
 
 
 
