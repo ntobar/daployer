@@ -90,7 +90,6 @@ public class CreatePanel extends JPanel implements MouseListener {
 
 
     //Daployer Logo
-
     JLabel daployerLabel = new JLabel("<html><p><span color=#90C3F0 style=\""
             + "font-family: terminal, monaco; font-size: 36pt;\">>_  daployer </span></p>");
 
@@ -120,7 +119,8 @@ public class CreatePanel extends JPanel implements MouseListener {
     JLabel emptyLeft = new JLabel();
     emptyLeft.setOpaque(true);
     emptyLeft.setBackground(MAIA_BG_COLOR);
-    emptyLeft.setBorder(BorderFactory.createMatteBorder(10,0,10,0, MAIA_LOGO_COLOR));
+    emptyLeft.setBorder(BorderFactory.createMatteBorder(10,0,10,0,
+            MAIA_LOGO_COLOR));
 //    emptyLeft.setBorder(BorderFactory.createBevelBorder(
 //            BevelBorder.RAISED,
 //            MAIA_LOGO_COLOR, MAIA_LOGO_COLOR,
@@ -131,7 +131,8 @@ public class CreatePanel extends JPanel implements MouseListener {
     emptyRight.setOpaque(true);
     //emptyRight.setBackground(MAIA_LOGO_COLOR);
     emptyRight.setBackground(MAIA_BG_COLOR);
-    emptyRight.setBorder(BorderFactory.createMatteBorder(10,0,10,0, MAIA_LOGO_COLOR));
+    emptyRight.setBorder(BorderFactory.createMatteBorder(10,0,10,0,
+            MAIA_LOGO_COLOR));
 
 //    emptyRight.setBorder(BorderFactory.createBevelBorder(
 //            BevelBorder.RAISED,
@@ -491,7 +492,8 @@ public class CreatePanel extends JPanel implements MouseListener {
     b.setBackground(MAIA_BG_COLOR);
     b.setForeground(MAIA_LOGO_COLOR);
     b.setBorder(BorderFactory.createBevelBorder(
-            BevelBorder.LOWERED, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR));
+            BevelBorder.LOWERED, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR, MAIA_LOGO_COLOR,
+            MAIA_LOGO_COLOR));
 
 
   }
@@ -508,7 +510,9 @@ public class CreatePanel extends JPanel implements MouseListener {
 
   public void whenEnteredFeature(JButton b) {
 
-    Color color = new Color(144, 195, 220);
+    //Color color = new Color(144, 175, 215);
+
+    Color color = new Color(173, 216, 230);
 
     b.setOpaque(true);
     b.setBackground(color);
@@ -522,7 +526,7 @@ public class CreatePanel extends JPanel implements MouseListener {
   @Override
   public void mouseClicked(MouseEvent e) {
 
-
+    // N/A
 
   }
 
