@@ -345,6 +345,8 @@ public class CreatePanel extends JPanel implements MouseListener {
     //TODO: PREVIEW BUTTON needs to go in (2, 1) and (3, 1)
 
     previewPanel = new JPanel();
+    previewPanel.setBorder(BorderFactory.createMatteBorder(2,2,2,2,
+            Color.BLACK));
 
     //g.weightx = 0.0;
 
