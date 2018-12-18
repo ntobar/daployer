@@ -436,7 +436,7 @@ public class CreatePanel extends JPanel implements MouseListener {
   public JButton getCreateCard() {
     return createCard;
   }
-  
+
 
   public JButton getChooseBackGroundImg() {
     return chooseBackGroundImg;
