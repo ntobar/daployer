@@ -3,6 +3,9 @@ package Visual.MainPanels;
 import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -16,7 +19,7 @@ import Cards.dAppCard;
 /**
  *
  */
-public class CreatePanel extends JPanel {
+public class CreatePanel extends JPanel implements MouseListener {
   private Color MAIA_BG_COLOR;
   private Color MAIA_LOGO_COLOR;
   private ICard card;
@@ -319,8 +322,8 @@ public class CreatePanel extends JPanel {
 
     //this.add(new JSeparator());
 
-    g.ipady = 0;
-    g.ipadx = 100;
+    g.ipady = 20;
+    g.ipadx = 40;
 
 
 
@@ -360,9 +363,9 @@ public class CreatePanel extends JPanel {
     chooseBackGroundImg.setBackground(MAIA_LOGO_COLOR);
     chooseBackGroundImg.setForeground(MAIA_BG_COLOR);
     chooseBackGroundImg.setBorder(BorderFactory.createBevelBorder(
-            BevelBorder.RAISED, MAIA_LOGO_COLOR,
-            MAIA_BG_COLOR,
-            MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
+
+    chooseBackGroundImg.addMouseListener(this);
 
     g.gridx = 0;
     g.gridy = 2;
@@ -370,18 +373,33 @@ public class CreatePanel extends JPanel {
 
     chooseLogoImg = new JButton("Choose Logo Image");
     chooseLogoImg.setActionCommand("chooseLogoImage");
+    chooseLogoImg.setOpaque(true);
+    chooseLogoImg.setBackground(MAIA_LOGO_COLOR);
+    chooseLogoImg.setForeground(MAIA_BG_COLOR);
+    chooseLogoImg.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
     g.gridx = 1;
     g.gridy = 2;
     this.add(chooseLogoImg,g);
 
     chooseHTML = new JButton("Choose HTML Files");
     chooseHTML.setActionCommand("chooseHTMLImage");
+    chooseHTML.setOpaque(true);
+    chooseHTML.setBackground(MAIA_LOGO_COLOR);
+    chooseHTML.setForeground(MAIA_BG_COLOR);
+    chooseHTML.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
     g.gridx = 2;
     g.gridy = 2;
     this.add(chooseHTML,g);
 
     createHTML = new JButton("HTML Lab");
     createHTML.setActionCommand("HTMLLab");
+    createHTML.setOpaque(true);
+    createHTML.setBackground(MAIA_LOGO_COLOR);
+    createHTML.setForeground(MAIA_BG_COLOR);
+    createHTML.setBorder(BorderFactory.createBevelBorder(
+            BevelBorder.RAISED, MAIA_LOGO_COLOR, MAIA_BG_COLOR, MAIA_LOGO_COLOR, MAIA_BG_COLOR));
     g.gridx = 1;
     g.gridy = 3;
     this.add(createHTML,g);
@@ -463,5 +481,31 @@ public class CreatePanel extends JPanel {
 
   public JButton getCreateHTML() {
     return createHTML;
+  }
+
+
+  @Override
+  public void mouseClicked(MouseEvent e) {
+    
+  }
+
+  @Override
+  public void mousePressed(MouseEvent e) {
+
+  }
+
+  @Override
+  public void mouseReleased(MouseEvent e) {
+
+  }
+
+  @Override
+  public void mouseEntered(MouseEvent e) {
+
+  }
+
+  @Override
+  public void mouseExited(MouseEvent e) {
+
   }
 }
