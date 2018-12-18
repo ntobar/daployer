@@ -23,6 +23,9 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import Cards.ICard;
 import Cards.dAppCard;
 
+//TODO: Create Card Button needs to go in between title and name
+
+
 
 /**
  * A Panel and Class fully supporting Card Creating functionality.
@@ -45,6 +48,7 @@ public class CreatePanel extends JPanel implements MouseListener {
   private JFileChooser backgroundImgChooser;
   private JFileChooser logoImgChooser;
   private JFileChooser htmlChooser;
+  private JPanel previewPanel;
 
 
   /**
@@ -334,6 +338,26 @@ public class CreatePanel extends JPanel implements MouseListener {
     htmlChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
     htmlChooser.setAcceptAllFileFilterUsed(false);
 
+    //---------------------------------------------------------------------------------------------
+    //--------------------------------------- Preview Panel ---------------------------------------
+    //---------------------------------------------------------------------------------------------
+
+    //TODO: PREVIEW BUTTON needs to go in (2, 1) and (3, 1)
+
+    previewPanel = new JPanel();
+
+    //g.weightx = 0.0;
+
+    g.gridheight = 2;
+    g.gridx = 1;
+    g.gridy = 2;
+    g.ipady = 400;
+    g.ipadx = panelWidth;
+
+    this.add(previewPanel, g);
+
+
+
 
 
 
@@ -341,6 +365,13 @@ public class CreatePanel extends JPanel implements MouseListener {
     //---------------------------------------------------------------------------------------------
     //---------------------------------- Button Setup & Adding ------------------------------------
     //---------------------------------------------------------------------------------------------
+
+    //Reset
+    g.gridheight = 1;
+//
+    g.ipady = 20;
+    g.ipadx = 40;
+    // end reset
 
     chooseBackGroundImg = new JButton("Choose Background Image");
     chooseBackGroundImg.setActionCommand("chooseBGIMG");
@@ -366,7 +397,7 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     chooseLogoImg.addMouseListener(this);
 
-    g.gridx = 1;
+    g.gridx = 2;
     g.gridy = 2;
     this.add(chooseLogoImg,g);
 
@@ -380,8 +411,8 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     chooseHTML.addMouseListener(this);
 
-    g.gridx = 2;
-    g.gridy = 2;
+    g.gridx = 0;
+    g.gridy = 3;
     this.add(chooseHTML,g);
 
     createHTML = new JButton("HTML Lab");
@@ -394,7 +425,7 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     createHTML.addMouseListener(this);
 
-    g.gridx = 1;
+    g.gridx = 2;
     g.gridy = 3;
     this.add(createHTML,g);
 
@@ -409,8 +440,8 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     createCard.addMouseListener(this);
 
-    g.gridx = 2;
-    g.gridy = 3;
+    g.gridx = 1;
+    g.gridy = 4;
     this.add(createCard,g);
 
 
@@ -469,6 +500,14 @@ public class CreatePanel extends JPanel implements MouseListener {
 
   public JButton getCreateHTML() {
     return createHTML;
+  }
+
+  public JPanel getPreviewPanel() {
+    return previewPanel;
+  }
+
+  public void setPreviewPanel(JPanel previewPanel) {
+    this.previewPanel = previewPanel;
   }
 
   public void whenPressedFeature(JButton b) {

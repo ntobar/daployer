@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719c4350-bc3d-4e1e-9b61-d6cd92636895" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -48,13 +49,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="16757" />
+          <entry key="java" value="17191" />
           <entry key="md" value="134" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16757" />
+          <entry key="JAVA" value="17191" />
           <entry key="Markdown" value="134" />
         </counts>
       </usages-collector>
@@ -120,8 +121,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1011">
-              <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+            <state relative-caret-position="364">
+              <caret line="369" lean-forward="true" selection-start-line="369" selection-end-line="369" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5798#5799#0" expanded="true" />
@@ -144,6 +145,10 @@
                 <element signature="e#6655#6656#0" expanded="true" />
                 <element signature="e#6691#6692#0" expanded="true" />
                 <element signature="e#6718#6719#0" expanded="true" />
+                <element signature="e#13749#13750#0" expanded="true" />
+                <element signature="e#13778#13779#0" expanded="true" />
+                <element signature="e#13832#13833#0" expanded="true" />
+                <element signature="e#13874#13875#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,7 +178,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cards/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3149">
+            <state relative-caret-position="-539">
               <caret line="74" column="74" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -361,7 +366,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545097294582" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545106206286" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -402,12 +407,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544581962428</updated>
       <workItem from="1544581965668" duration="35423000" />
-      <workItem from="1544746353709" duration="43927000" />
+      <workItem from="1544746353709" duration="45558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79350000" />
+    <option name="totallyTimeSpent" value="80981000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -590,38 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cards/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3149">
-          <caret line="74" column="74" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4913#4914#0" expanded="true" />
-            <element signature="e#4934#4935#0" expanded="true" />
-            <element signature="e#4964#4965#0" expanded="true" />
-            <element signature="e#4986#4987#0" expanded="true" />
-            <element signature="e#5024#5025#0" expanded="true" />
-            <element signature="e#5050#5051#0" expanded="true" />
-            <element signature="e#5090#5091#0" expanded="true" />
-            <element signature="e#5118#5119#0" expanded="true" />
-            <element signature="e#5147#5148#0" expanded="true" />
-            <element signature="e#5168#5169#0" expanded="true" />
-            <element signature="e#5206#5207#0" expanded="true" />
-            <element signature="e#5232#5233#0" expanded="true" />
-            <element signature="e#5268#5269#0" expanded="true" />
-            <element signature="e#5296#5297#0" expanded="true" />
-            <element signature="e#5349#5350#0" expanded="true" />
-            <element signature="e#5390#5391#0" expanded="true" />
-            <element signature="e#5436#5437#0" expanded="true" />
-            <element signature="e#5470#5471#0" expanded="true" />
-            <element signature="e#7419#7420#0" expanded="true" />
-            <element signature="e#7455#7456#0" expanded="true" />
-            <element signature="e#7488#7489#0" expanded="true" />
-            <element signature="e#7513#7514#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visual/MenuPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="887">
@@ -666,10 +639,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cards/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-539">
+          <caret line="74" column="74" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4913#4914#0" expanded="true" />
+            <element signature="e#4934#4935#0" expanded="true" />
+            <element signature="e#4964#4965#0" expanded="true" />
+            <element signature="e#4986#4987#0" expanded="true" />
+            <element signature="e#5024#5025#0" expanded="true" />
+            <element signature="e#5050#5051#0" expanded="true" />
+            <element signature="e#5090#5091#0" expanded="true" />
+            <element signature="e#5118#5119#0" expanded="true" />
+            <element signature="e#5147#5148#0" expanded="true" />
+            <element signature="e#5168#5169#0" expanded="true" />
+            <element signature="e#5206#5207#0" expanded="true" />
+            <element signature="e#5232#5233#0" expanded="true" />
+            <element signature="e#5268#5269#0" expanded="true" />
+            <element signature="e#5296#5297#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5390#5391#0" expanded="true" />
+            <element signature="e#5436#5437#0" expanded="true" />
+            <element signature="e#5470#5471#0" expanded="true" />
+            <element signature="e#7419#7420#0" expanded="true" />
+            <element signature="e#7455#7456#0" expanded="true" />
+            <element signature="e#7488#7489#0" expanded="true" />
+            <element signature="e#7513#7514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visual/MainPanels/CreatePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1011">
-          <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+        <state relative-caret-position="364">
+          <caret line="369" lean-forward="true" selection-start-line="369" selection-end-line="369" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5798#5799#0" expanded="true" />
@@ -692,6 +697,10 @@
             <element signature="e#6655#6656#0" expanded="true" />
             <element signature="e#6691#6692#0" expanded="true" />
             <element signature="e#6718#6719#0" expanded="true" />
+            <element signature="e#13749#13750#0" expanded="true" />
+            <element signature="e#13778#13779#0" expanded="true" />
+            <element signature="e#13832#13833#0" expanded="true" />
+            <element signature="e#13874#13875#0" expanded="true" />
           </folding>
         </state>
       </provider>
