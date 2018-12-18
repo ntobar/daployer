@@ -1,13 +1,21 @@
 package Visual.MainPanels;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
 import javax.imageio.ImageIO;
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import javax.swing.filechooser.FileFilter;
@@ -17,7 +25,8 @@ import Cards.dAppCard;
 
 
 /**
- *
+ * A Panel and Class fully supporting Card Creating functionality.
+ * Class responsible for creating Cards.
  */
 public class CreatePanel extends JPanel implements MouseListener {
   private Color MAIA_BG_COLOR;
@@ -36,11 +45,11 @@ public class CreatePanel extends JPanel implements MouseListener {
   private JFileChooser backgroundImgChooser;
   private JFileChooser logoImgChooser;
   private JFileChooser htmlChooser;
-  private String name;
 
 
-
-
+  /**
+   * Consutrcts a {@code CreatePanel} object.
+   */
   public CreatePanel() {
     super();
 
