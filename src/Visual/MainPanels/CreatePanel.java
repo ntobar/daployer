@@ -10,12 +10,7 @@ import java.awt.event.FocusListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import javax.swing.filechooser.FileFilter;
@@ -35,6 +30,7 @@ public class CreatePanel extends JPanel implements MouseListener {
   private Color MAIA_BG_COLOR;
   private Color MAIA_LOGO_COLOR;
   private ICard card;
+  private ICard previewCard;
   private JButton createCard;
   private JLabel nameLabel;
   private JLabel titleLabel;
@@ -58,6 +54,7 @@ public class CreatePanel extends JPanel implements MouseListener {
     super();
 
     this.card = new dAppCard();
+    this.previewCard = new dAppCard();
 
 
     //---------------------------------------------------------------------------------------------
@@ -193,6 +190,8 @@ public class CreatePanel extends JPanel implements MouseListener {
 
 
 
+
+
       }
 
       @Override
@@ -202,8 +201,13 @@ public class CreatePanel extends JPanel implements MouseListener {
 
         setName(nameText);
         nameField.setBackground(Color.WHITE);
+
+
+
+
       }
     });
+
 
 
 
@@ -224,8 +228,11 @@ public class CreatePanel extends JPanel implements MouseListener {
         setTitle(nameText);
         titleField.setBackground(Color.WHITE);
 
+
+
       }
     });
+
 
 
     //---------------------------------------------------------------------------------------------
@@ -510,6 +517,53 @@ public class CreatePanel extends JPanel implements MouseListener {
 
   public void setPreviewPanel(JPanel previewPanel) {
     this.previewPanel = previewPanel;
+  }
+
+
+
+  public void updateCard(String type, String newComponent) {
+
+    switch(type) {
+
+      case "name":
+
+        previewCard.setName(newComponent);
+
+        break;
+
+      case "title":
+
+        previewCard.setTitle(newComponent);
+
+        break;
+
+      case "pathName":
+
+        previewCard.setPathName(newComponent);
+
+        break;
+
+      case "description":
+
+        previewCard.setDescription(newComponent);
+
+        break;
+
+
+      default:
+        break;
+    }
+
+
+    JPanel newP = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
+            previewCard.getPathName(), previewCard.getDescription());
+
+    newP.setPreferredSize(new Dimension(400,266));
+    previewPanel = newP;
+
+
+
+
   }
 
   public void whenPressedFeature(JButton b) {
