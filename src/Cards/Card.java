@@ -182,7 +182,6 @@ public abstract class Card implements ICard {
     descriptiona = description;
 
     JLabel theLabel = new JLabel(descriptiona);
-    System.out.println("desc" + descriptiona);
     theLabel.setVerticalAlignment(SwingConstants.CENTER);
     theLabel.setHorizontalAlignment(SwingConstants.CENTER);
 

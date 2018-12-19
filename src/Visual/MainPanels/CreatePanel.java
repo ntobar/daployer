@@ -218,6 +218,9 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     titleField = new JTextField();
     titleField.setColumns(10);
+
+    titleField.setBorder(BorderFactory.createLineBorder(MAIA_LOGO_COLOR));
+
     titleField.addFocusListener(new FocusListener() {
       @Override
       public void focusGained(FocusEvent e) {
