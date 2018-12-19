@@ -195,6 +195,8 @@ public class CreatePanel extends JPanel implements MouseListener {
 
 
 
+
+
       }
 
       @Override
@@ -204,6 +206,30 @@ public class CreatePanel extends JPanel implements MouseListener {
 
         setName(nameText);
         nameField.setBackground(Color.WHITE);
+
+        resetPreview();
+
+//        removePreview();
+//
+//
+//        previewPanel = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
+//                previewCard.getPathName(), previewCard.getDescription());
+//
+//
+//        g.gridheight = 2;
+//        g.gridx = 1;
+//        g.gridy = 2;
+//        g.ipady = 400;
+//        g.ipadx = 266;
+//
+//        add(previewPanel, g);
+//
+//        previewPanel.repaint();
+//        previewPanel.revalidate();
+//
+//        g.gridheight = 0;
+//        g.ipady = 40;
+//        g.ipadx = 300;
 
         //updateCard("name", nameText);
 
@@ -235,6 +261,29 @@ public class CreatePanel extends JPanel implements MouseListener {
 
         setTitle(nameText);
         titleField.setBackground(Color.WHITE);
+
+//        removePreview();
+//
+//
+//        previewPanel = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
+//                previewCard.getPathName(), previewCard.getDescription());
+//
+//
+//        g.gridheight = 2;
+//        g.gridx = 1;
+//        g.gridy = 2;
+//        g.ipady = 400;
+//        g.ipadx = 266;
+//
+//        add(previewPanel, g);
+//
+//        previewPanel.repaint();
+//        previewPanel.revalidate();
+//
+//        g.gridheight = 0;
+//        g.ipady = 40;
+//        g.ipadx = 300;
+        resetPreview();
 
 
 
@@ -381,7 +430,9 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     //TODO: PREVIEW BUTTON needs to go in (2, 1) and (3, 1)
 
-    previewPanel = new JPanel();
+//    previewPanel = new JPanel();
+    previewPanel = previewCard.createCard(previewCard.getName(),previewCard.getTitle(),
+            previewCard.getPathName(), previewCard.getDescription());
     previewPanel.setBorder(BorderFactory.createMatteBorder(2,2,2,2,
             Color.BLACK));
 
@@ -501,6 +552,41 @@ public class CreatePanel extends JPanel implements MouseListener {
 //    g.gridy = 1;
 //    this.add(createCard,g);
 
+
+  }
+
+  public void resetPreview() {
+
+    GridBagConstraints g = new GridBagConstraints();
+
+    removePreview();
+
+
+    previewPanel = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
+            previewCard.getPathName(), previewCard.getDescription());
+
+
+    g.gridheight = 2;
+    g.gridx = 1;
+    g.gridy = 2;
+    g.ipady = 400;
+    g.ipadx = 266;
+
+    add(previewPanel, g);
+
+    previewPanel.repaint();
+    previewPanel.revalidate();
+
+    g.gridheight = 0;
+    g.ipady = 40;
+    g.ipadx = 300;
+
+  }
+
+
+  public void removePreview() {
+
+    this.remove(previewPanel);
 
   }
 
@@ -649,14 +735,14 @@ public class CreatePanel extends JPanel implements MouseListener {
     //previewPanel.add(newP);
 
 
-
-    this.add(previewPanel, g);
-
-    newP.setVisible(true);
-    //previewPanel.add(newP);
-    //previewPanel.setVisible(true);
-    previewPanel.repaint();
-    previewPanel.revalidate();
+//
+//    this.add(previewPanel, g);
+//
+//    newP.setVisible(true);
+//    //previewPanel.add(newP);
+//    //previewPanel.setVisible(true);
+//    previewPanel.repaint();
+//    previewPanel.revalidate();
 
 
 //    JFrame previewFrame = new JFrame("Preview");
