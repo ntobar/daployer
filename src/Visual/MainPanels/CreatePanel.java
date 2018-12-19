@@ -207,7 +207,7 @@ public class CreatePanel extends JPanel implements MouseListener {
         setName(nameText);
         nameField.setBackground(Color.WHITE);
 
-        resetPreview(400,266);
+        resetPreview(350,266);
 
 //        removePreview();
 //
