@@ -70,6 +70,8 @@ public class Controller implements IController {
     } else if (e.getActionCommand().equals("previewButton")) {
 
       String cardName = homeView.getCreatePanel().getPreviewCard().getName();
+      System.out.println("Preview Card Name: " + homeView.getCreatePanel().getPreviewCard().getName());
+      System.out.println("Preview Card Title: " + homeView.getCreatePanel().getPreviewCard().getTitle());
       String cardTitle = homeView.getCreatePanel().getPreviewCard().getTitle();
       String pathName = homeView.getCreatePanel().getPreviewCard().getPathName();
       //String description = homeView.getCreatePanel().getCard().getDescription();
@@ -113,7 +115,7 @@ public class Controller implements IController {
 
 
       homeView.getCreatePanel().getCard().setDescription(html.giveHTML());
-      System.out.println(html.giveHTML());
+      System.out.println("Controller line 116: " + html.giveHTML());
 
       //System.out.println("html: " + html);
 
