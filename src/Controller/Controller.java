@@ -191,6 +191,8 @@ public class Controller implements IController {
 
         homeView.getCreatePanel().getCard().setPathName(file.getPath());
         homeView.getCreatePanel().getPreviewCard().setPathName(file.getPath());
+
+        homeView.getCreatePanel().resetPreview();
         //homeView.getCreatePanel().getCard().set
 
 
