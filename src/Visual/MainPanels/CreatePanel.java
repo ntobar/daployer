@@ -609,7 +609,8 @@ public class CreatePanel extends JPanel implements MouseListener {
 //      default:
 //        break;
 //    }
-    previewPanel.setVisible(false);
+    this.remove(previewPanel);
+
 
     GridBagConstraints g = new GridBagConstraints();
     g.gridheight = 2;

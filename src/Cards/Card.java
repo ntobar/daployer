@@ -160,8 +160,8 @@ public abstract class Card implements ICard {
     //---------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------
 
-    Border border = BorderFactory.createMatteBorder(6, 3, 6, 6,
-            MAIA_LOGO_COLOR);
+    Border border = BorderFactory.createMatteBorder(2, 2, 2, 2,
+            Color.BLACK);
 
 
 
