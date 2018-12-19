@@ -1,7 +1,6 @@
 package Controller;
 
-import java.awt.CardLayout;
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -192,7 +191,7 @@ public class Controller implements IController {
         homeView.getCreatePanel().getCard().setPathName(file.getPath());
         homeView.getCreatePanel().getPreviewCard().setPathName(file.getPath());
 
-        homeView.getCreatePanel().resetPreview();
+        homeView.getCreatePanel().resetPreview(200,50);
         //homeView.getCreatePanel().getCard().set
 
 

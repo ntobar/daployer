@@ -207,7 +207,7 @@ public class CreatePanel extends JPanel implements MouseListener {
         setName(nameText);
         nameField.setBackground(Color.WHITE);
 
-        resetPreview();
+        resetPreview(400,266);
 
 //        removePreview();
 //
@@ -283,7 +283,7 @@ public class CreatePanel extends JPanel implements MouseListener {
 //        g.gridheight = 0;
 //        g.ipady = 40;
 //        g.ipadx = 300;
-        resetPreview();
+        resetPreview(400,266);
 
 
 
@@ -555,7 +555,7 @@ public class CreatePanel extends JPanel implements MouseListener {
 
   }
 
-  public void resetPreview() {
+  public void resetPreview(int ipady, int ipadx) {
 
     GridBagConstraints g = new GridBagConstraints();
 
@@ -565,16 +565,21 @@ public class CreatePanel extends JPanel implements MouseListener {
     previewPanel = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
             previewCard.getPathName(), previewCard.getDescription());
 
+    System.out.println("SizePref: " + previewPanel.getPreferredSize() + "\nSize: " + previewPanel.getSize());
 //    previewPanel.setPreferredSize(new Dimension(400, 600));
 
     previewPanel.setPreferredSize(new Dimension(272,500));
     previewPanel.setSize(new Dimension(272,500));
 
+
+
     g.gridheight = 2;
     g.gridx = 1;
     g.gridy = 2;
-    g.ipady = 400;
-    g.ipadx = 266;
+    g.ipady = ipady;
+    g.ipadx = ipadx;
+//    g.ipady = 400;
+//    g.ipadx = 266;
 
     add(previewPanel, g);
 
