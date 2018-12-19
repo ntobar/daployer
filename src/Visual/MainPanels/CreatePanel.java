@@ -393,7 +393,7 @@ public class CreatePanel extends JPanel implements MouseListener {
     g.ipady = 400;
     g.ipadx = panelWidth;
 
-    //this.add(previewPanel, g);
+    this.add(previewPanel, g);
 
 
 
@@ -633,23 +633,25 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     //previewPanel.setVisible(true);
 
-    previewPanel = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
-            previewCard.getPathName(), previewCard.getDescription());
+    //previewPanel = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
+      //      previewCard.getPathName(), previewCard.getDescription());
     //previewPanel.setSize(new Dimension(272,500));
 
-    //newP.setVisible(true);
-    //previewPanel.add(newP);
-    //previewPanel.setVisible(true);
+    newP.setVisible(true);
+    previewPanel.add(newP);
+    previewPanel.setVisible(true);
+    previewPanel.repaint();
+    previewPanel.revalidate();
 
 
-    JFrame previewFrame = new JFrame("Preview");
-    previewFrame.setSize(new Dimension(previewPanel.getWidth(),previewPanel.getHeight()));
-    previewFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-    previewFrame.setLocation(480,340);
-    //previewFrame.setLocationRelativeTo(null);
-    //previewFrame.setPreferredSize(new Dimension(300,500));
-    previewFrame.add(previewPanel);
-    previewFrame.setVisible(true);
+//    JFrame previewFrame = new JFrame("Preview");
+//    previewFrame.setSize(new Dimension(previewPanel.getWidth(),previewPanel.getHeight()));
+//    previewFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+//    previewFrame.setLocation(480,340);
+//    //previewFrame.setLocationRelativeTo(null);
+//    //previewFrame.setPreferredSize(new Dimension(300,500));
+//    previewFrame.add(previewPanel);
+//    previewFrame.setVisible(true);
     //JOptionPane.
 
 
