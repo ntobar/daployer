@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="719c4350-bc3d-4e1e-9b61-d6cd92636895" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
-    </list>
+    <list default="true" id="719c4350-bc3d-4e1e-9b61-d6cd92636895" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -366,7 +364,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545181163464" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545238095896" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -407,12 +405,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544581962428</updated>
       <workItem from="1544581965668" duration="35423000" />
-      <workItem from="1544746353709" duration="51092000" />
+      <workItem from="1544746353709" duration="51246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86515000" />
+    <option name="totallyTimeSpent" value="86669000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
