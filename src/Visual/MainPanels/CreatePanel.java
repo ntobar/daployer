@@ -319,7 +319,7 @@ public class CreatePanel extends JPanel implements MouseListener {
 //    g.gridy = 1;
 //    this.add(nameField,g);
 
-    g.ipady = 32;
+    g.ipady = 39;
     g.ipadx = panelWidth;
 
 
