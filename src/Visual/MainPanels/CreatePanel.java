@@ -393,7 +393,7 @@ public class CreatePanel extends JPanel implements MouseListener {
     g.ipady = 400;
     g.ipadx = panelWidth;
 
-    this.add(previewPanel, g);
+    //this.add(previewPanel, g);
 
 
 
@@ -612,7 +612,7 @@ public class CreatePanel extends JPanel implements MouseListener {
 //      default:
 //        break;
 //    }
-    this.remove(previewPanel);
+    //this.remove(previewPanel);
 
 
     GridBagConstraints g = new GridBagConstraints();
@@ -638,11 +638,13 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     //newP.setVisible(true);
     //previewPanel.add(newP);
-    previewPanel.setVisible(true);
+    //previewPanel.setVisible(true);
+
+    //JOptionPane.
 
 
 
-    this.add(previewPanel, g);
+    //this.add(previewPanel, g);
 
 
 
