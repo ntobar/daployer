@@ -1,6 +1,7 @@
 package Controller;
 
-import java.awt.*;
+import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -8,7 +9,10 @@ import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JPanel;
+import javax.swing.UIManager;
 import javax.swing.border.BevelBorder;
 import javax.swing.plaf.ColorUIResource;
 
