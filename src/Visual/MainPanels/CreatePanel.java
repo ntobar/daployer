@@ -645,7 +645,8 @@ public class CreatePanel extends JPanel implements MouseListener {
     JFrame previewFrame = new JFrame("Preview");
     previewFrame.setSize(new Dimension(previewPanel.getWidth(),previewPanel.getHeight()));
     previewFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-    previewFrame.setLocationRelativeTo(null);
+    previewFrame.setLocation(480,340);
+    //previewFrame.setLocationRelativeTo(null);
     //previewFrame.setPreferredSize(new Dimension(300,500));
     previewFrame.add(previewPanel);
     previewFrame.setVisible(true);
