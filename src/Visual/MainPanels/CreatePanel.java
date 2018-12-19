@@ -635,6 +635,7 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     previewPanel = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
             previewCard.getPathName(), previewCard.getDescription());
+    previewPanel.setSize(new Dimension(272,500));
 
     //newP.setVisible(true);
     //previewPanel.add(newP);
@@ -642,7 +643,8 @@ public class CreatePanel extends JPanel implements MouseListener {
 
 
     JFrame previewFrame = new JFrame("Preview");
-    previewFrame.setSize(new Dimension(500,500));
+    previewFrame.setSize(new Dimension(previewPanel.getWidth(),previewPanel.getHeight()));
+    previewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     //previewFrame.setPreferredSize(new Dimension(300,500));
     previewFrame.add(previewPanel);
     previewFrame.setVisible(true);
