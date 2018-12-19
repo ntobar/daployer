@@ -18,8 +18,8 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import Cards.ICard;
 import Cards.dAppCard;
 
-//TODO: Create Card Button needs to go in between title and name
 
+//TODO: Add color chooser so user can choose card background color?
 
 
 /**
@@ -612,7 +612,8 @@ public class CreatePanel extends JPanel implements MouseListener {
 //      default:
 //        break;
 //    }
-    //this.remove(previewPanel);
+
+    this.remove(previewPanel);
 
 
     GridBagConstraints g = new GridBagConstraints();
@@ -633,13 +634,21 @@ public class CreatePanel extends JPanel implements MouseListener {
 
     //previewPanel.setVisible(true);
 
-    //previewPanel = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
-      //      previewCard.getPathName(), previewCard.getDescription());
+    previewPanel = previewCard.createCard(previewCard.getName(), previewCard.getTitle(),
+            previewCard.getPathName(), previewCard.getDescription());
     //previewPanel.setSize(new Dimension(272,500));
 
+
+    //newP.setVisible(true);
+    //previewPanel.add(newP);
+
+
+
+    this.add(previewPanel, g);
+
     newP.setVisible(true);
-    previewPanel.add(newP);
-    previewPanel.setVisible(true);
+    //previewPanel.add(newP);
+    //previewPanel.setVisible(true);
     previewPanel.repaint();
     previewPanel.revalidate();
 
