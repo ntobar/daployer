@@ -190,6 +190,7 @@ public class Controller implements IController {
         File file = homeView.getCreatePanel().getBackgroundImgChooser().getSelectedFile();
 
         homeView.getCreatePanel().getCard().setPathName(file.getPath());
+        homeView.getCreatePanel().getPreviewCard().setPathName(file.getPath());
         //homeView.getCreatePanel().getCard().set
 
 
