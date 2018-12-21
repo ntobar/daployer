@@ -100,6 +100,9 @@ public class CreatePanel extends JPanel implements MouseListener {
 
 
 
+
+
+
     daployerLabel.setBorder(BorderFactory.createBevelBorder(
             BevelBorder.RAISED,
             MAIA_LOGO_COLOR, MAIA_LOGO_COLOR,
@@ -199,6 +202,7 @@ public class CreatePanel extends JPanel implements MouseListener {
 
       }
 
+
       @Override
       public void focusLost(FocusEvent e) {
 
@@ -208,6 +212,8 @@ public class CreatePanel extends JPanel implements MouseListener {
         nameField.setBackground(Color.WHITE);
 
         resetPreview(350,266);
+
+
 
 //        removePreview();
 //
